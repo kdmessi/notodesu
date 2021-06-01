@@ -7,16 +7,16 @@
         <h1>{{ 'title.homepage' | trans }}</h1>
         <div>
             {{ 'global.locale.selected' | trans({ '%locale%': app.request.locale|locale_name(app.request.locale)|u.title }) }}
-            <br>
-            {{ 'global.locale.choose' | trans ~ ':' }}
-            <ul>
-                <li>
-                    <a href="{{ path('homepage', { _locale: 'pl' }) }}">{{ 'pl' | locale_name(app.request.locale) | u.title }}</a>
-                </li>
-                <li>
-                    <a href="{{ path('homepage', { _locale: 'en' }) }}">{{ 'en' | locale_name(app.request.locale) | u.title }}</a>
-                </li>
-            </ul>
+
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdown-menu-select-language" data-bs-toggle="dropdown" aria-expanded="false">
+                    {{ 'global.locale.choose' | trans ~ ':' }}
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-select-language">
+                    <li><a class="dropdown-item{% if app.request.locale == "pl" %} active{% endif %}" href="{{ path('homepage', { _locale: 'pl' }) }}">{{ 'pl' | locale_name(app.request.locale) | u.title }}</a></li>
+                    <li><a class="dropdown-item{% if app.request.locale == "en" %} active{% endif %}" href="{{ path('homepage', { _locale: 'en' }) }}">{{ 'en' | locale_name(app.request.locale) | u.title }}</a></li>
+                </ul>
+            </div>
         </div>
     </div>
 {% endblock %}
