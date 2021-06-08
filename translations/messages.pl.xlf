@@ -6,6 +6,14 @@
                 <source>title.homepage</source>
                 <target>Strona główna</target>
             </trans-unit>
+            <trans-unit id="title_login">
+                <source>title.login</source>
+                <target>Zaloguj się aby otrzymać dostęp do systemu!</target>
+            </trans-unit>
+            <trans-unit id="page_login">
+                <source>page.login</source>
+                <target>Logowanie</target>
+            </trans-unit>
             <trans-unit id="global_locale_selected">
                 <source>global.locale.selected</source>
                 <target>Wybrany język: %locale%</target>
@@ -13,6 +21,38 @@
             <trans-unit id="global_locale_choose">
                 <source>global.locale.choose</source>
                 <target>Wybierz język</target>
+            </trans-unit>
+            <trans-unit id="global_welcome_message">
+                <source>global.welcome_message</source>
+                <target>Jesteś zalogowany jako %username%</target>
+            </trans-unit>
+            <trans-unit id="global_action_logout">
+                <source>global.action.logout</source>
+                <target>Wyloguj</target>
+            </trans-unit>
+            <trans-unit id="global_action_back_to_list">
+                <source>global.action.back_to_list</source>
+                <target>Wróć do listy</target>
+            </trans-unit>
+            <trans-unit id="form_label_email">
+                <source>form.label.email</source>
+                <target>E-mail</target>
+            </trans-unit>
+            <trans-unit id="form_label_password">
+                <source>form.label.password</source>
+                <target>Hasło</target>
+            </trans-unit>
+            <trans-unit id="form_label_remember_me">
+                <source>form.label.remember_me</source>
+                <target>Zapamiętaj mnie</target>
+            </trans-unit>
+            <trans-unit id="form_action_login">
+                <source>form.action.login</source>
+                <target>Zaloguj</target>
+            </trans-unit>
+            <trans-unit id="form_action_save">
+                <source>form.action.save</source>
+                <target>Zapisz</target>
             </trans-unit>
         </body>
     </file>

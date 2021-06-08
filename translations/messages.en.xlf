@@ -6,6 +6,14 @@
                 <source>title.homepage</source>
                 <target>Homepage</target>
             </trans-unit>
+            <trans-unit id="title_login">
+                <source>title.login</source>
+                <target>Login to get access to the system!</target>
+            </trans-unit>
+            <trans-unit id="page_login">
+                <source>page.login</source>
+                <target>Login</target>
+            </trans-unit>
             <trans-unit id="global_locale_selected">
                 <source>global.locale.selected</source>
                 <target>Selected language: %locale%</target>
@@ -13,6 +21,38 @@
             <trans-unit id="global_locale_choose">
                 <source>global.locale.choose</source>
                 <target>Choose language</target>
+            </trans-unit>
+            <trans-unit id="global_welcome_message">
+                <source>global.welcome_message</source>
+                <target>You are logged in as %username%</target>
+            </trans-unit>
+            <trans-unit id="global_action_logout">
+                <source>global.action.logout</source>
+                <target>Logout</target>
+            </trans-unit>
+            <trans-unit id="global_action_back_to_list">
+                <source>global.action.back_to_list</source>
+                <target>Back to the list</target>
+            </trans-unit>
+            <trans-unit id="form_label_email">
+                <source>form.label.email</source>
+                <target>E-mail</target>
+            </trans-unit>
+            <trans-unit id="form_label_password">
+                <source>form.label.password</source>
+                <target>Password</target>
+            </trans-unit>
+            <trans-unit id="form_label_remember_me">
+                <source>form.label.remember_me</source>
+                <target>Remember me</target>
+            </trans-unit>
+            <trans-unit id="form_action_login">
+                <source>form.action.login</source>
+                <target>Sign in</target>
+            </trans-unit>
+            <trans-unit id="form_action_save">
+                <source>form.action.save</source>
+                <target>Save</target>
             </trans-unit>
         </body>
     </file>

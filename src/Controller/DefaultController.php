@@ -17,6 +17,7 @@ class DefaultController extends AbstractController
 {
     /**
      * @Route("/{_locale<%app.locales%>}", name="homepage")
+     *
      * @return Response
      */
     public function index(): Response
@@ -28,6 +29,7 @@ class DefaultController extends AbstractController
 
     /**
      * @Route("/", name="default")
+     *
      * @return Response
      */
     public function indexNoLocale(): Response

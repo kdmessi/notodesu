@@ -1,0 +1,9 @@
+{% include 'default/_form.html.twig' with {
+    page_title: 'title.login',
+    attr: {
+        method: 'POST',
+        action: url('app_login')
+    },
+    form: form,
+    submit_label: 'form.action.login'|trans,
+} %}
