@@ -1,6 +1,4 @@
-<?php /** @noinspection PhpPropertyOnlyWrittenInspection */
-/** @noinspection ALL */
-
+<?php
 /**
  * User entity.
  */
@@ -8,6 +6,8 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
@@ -63,8 +63,6 @@ class User implements UserInterface
     /**
      * E-mail.
      *
-     * @var string
-     *
      * @ORM\Column(
      *     type="string",
      *     length=180,
@@ -98,6 +96,23 @@ class User implements UserInterface
     private string $password;
 
     /**
+     * Contacts array.
+     *
+     * @var array The contacts list
+     *
+     * @ORM\OneToMany(targetEntity=Contact::class, mappedBy="user", orphanRemoval=true)
+     */
+    private $contacts;
+
+    /**
+     * User constructor.
+     */
+    public function __construct()
+    {
+        $this->contacts = new ArrayCollection();
+    }
+
+    /**
      * Getter for the Id.
      *
      * @return int|null Result
@@ -121,6 +136,8 @@ class User implements UserInterface
      * Setter for the E-mail.
      *
      * @param string $email E-mail
+     *
+     * @return User
      */
     public function setEmail(string $email): self
     {
@@ -132,9 +149,9 @@ class User implements UserInterface
     /**
      * A visual identifier that represents this user.
      *
-     * @see UserInterface
-     *
      * @return string User name
+     *
+     * @see UserInterface
      */
     public function getUsername(): string
     {
@@ -144,9 +161,9 @@ class User implements UserInterface
     /**
      * Getter for the Roles.
      *
-     * @see UserInterface
-     *
      * @return array Roles
+     *
+     * @see UserInterface
      */
     public function getRoles(): array
     {
@@ -161,6 +178,8 @@ class User implements UserInterface
      * Setter for the Roles.
      *
      * @param array $roles Roles
+     *
+     * @return User
      */
     public function setRoles(array $roles): self
     {
@@ -172,9 +191,9 @@ class User implements UserInterface
     /**
      * Getter for the Password.
      *
-     * @see UserInterface
-     *
      * @return string|null Password
+     *
+     * @see UserInterface
      */
     public function getPassword(): string
     {
@@ -185,6 +204,8 @@ class User implements UserInterface
      * Setter for the Password.
      *
      * @param string $password Password
+     *
+     * @return User
      */
     public function setPassword(string $password): self
     {
@@ -196,6 +217,8 @@ class User implements UserInterface
     /**
      * Returning a salt is only needed, if you are not using a modern
      * hashing algorithm (e.g. bcrypt or sodium) in your security.yaml.
+     *
+     * @return string|null
      *
      * @see UserInterface
      */
@@ -211,5 +234,45 @@ class User implements UserInterface
     {
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
+    }
+
+    /**
+     * @return Collection|Contact[]
+     */
+    public function getContacts(): Collection
+    {
+        return $this->contacts;
+    }
+
+    /**
+     * @param Contact $contact
+     *
+     * @return $this
+     */
+    public function addContact(Contact $contact): self
+    {
+        if (!$this->contacts->contains($contact)) {
+            $this->contacts[] = $contact;
+            $contact->setUser($this);
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param Contact $contact
+     *
+     * @return $this
+     */
+    public function removeContact(Contact $contact): self
+    {
+        if ($this->contacts->removeElement($contact)) {
+            // set the owning side to null (unless already changed)
+            if ($contact->getUser() === $this) {
+                $contact->setUser(null);
+            }
+        }
+
+        return $this;
     }
 }

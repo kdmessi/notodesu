@@ -6,6 +6,7 @@
 namespace App\DataFixtures;
 
 use Doctrine\Bundle\FixturesBundle\Fixture;
+use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Persistence\ObjectManager;
 use Faker\Factory;
 use Faker\Generator;
@@ -15,7 +16,7 @@ use LogicException;
 /**
  * Class BaseFixture.
  */
-abstract class AbstractBaseFixture extends Fixture
+abstract class AbstractBaseFixture extends Fixture implements OrderedFixtureInterface
 {
     /**
      * Faker.

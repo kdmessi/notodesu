@@ -14,10 +14,11 @@ use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
  */
 class UserFixtures extends AbstractBaseFixture
 {
+    public const SIMPLE_USER_REFERENCE = 'simple-user';
+    public const ADMIN_USER_REFERENCE = 'admin-user';
+
     /**
      * Password encoder.
-     *
-     * @var UserPasswordEncoderInterface
      */
     private UserPasswordEncoderInterface $passwordEncoder;
 
@@ -38,7 +39,7 @@ class UserFixtures extends AbstractBaseFixture
      */
     public function loadData(ObjectManager $manager): void
     {
-        $this->createMany(1, 'users', function () {
+        $this->createMany(1, self::SIMPLE_USER_REFERENCE, function () {
             $user = new User();
             $user->setEmail('user@notodesu.pl');
             $user->setRoles([User::ROLE_USER]);
@@ -52,7 +53,7 @@ class UserFixtures extends AbstractBaseFixture
             return $user;
         });
 
-        $this->createMany(1, 'admins', function () {
+        $this->createMany(1, self::ADMIN_USER_REFERENCE, function () {
             $user = new User();
             $user->setEmail('admin@notodesu.pl');
             $user->setRoles([User::ROLE_USER, User::ROLE_ADMIN]);
@@ -67,5 +68,15 @@ class UserFixtures extends AbstractBaseFixture
         });
 
         $manager->flush();
+    }
+
+    /**
+     * Get order.
+     *
+     * @return int
+     */
+    public function getOrder(): int
+    {
+        return 0;
     }
 }

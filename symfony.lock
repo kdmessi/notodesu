@@ -1,4 +1,7 @@
 {
+    "behat/transliterator": {
+        "version": "v1.3.0"
+    },
     "composer/package-versions-deprecated": {
         "version": "1.11.99.2"
     },
@@ -127,6 +130,15 @@
     "fzaninotto/faker": {
         "version": "v1.9.2"
     },
+    "gedmo/doctrine-extensions": {
+        "version": "v3.0.5"
+    },
+    "knplabs/knp-components": {
+        "version": "v3.0.2"
+    },
+    "knplabs/knp-paginator-bundle": {
+        "version": "v5.5.1"
+    },
     "laminas/laminas-code": {
         "version": "4.3.0"
     },
@@ -192,6 +204,18 @@
             "version": "3.6",
             "ref": "1019e5c08d4821cb9b77f4891f8e9c31ff20ac6f"
         }
+    },
+    "stof/doctrine-extensions-bundle": {
+        "version": "1.2",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "1.2",
+            "ref": "6c1ceb662f8997085f739cd089bfbef67f245983"
+        },
+        "files": [
+            "config/packages/stof_doctrine_extensions.yaml"
+        ]
     },
     "symfony/asset": {
         "version": "v4.4.22"

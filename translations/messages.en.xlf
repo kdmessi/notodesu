@@ -2,6 +2,26 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
     <file source-language="pl" target-language="pl" datatype="plaintext" original="messages.pl.xlf">
         <body>
+            <trans-unit id="title_contact_create">
+                <source>title.contact_create</source>
+                <target>Create new contact</target>
+            </trans-unit>
+            <trans-unit id="title_contact_delete">
+                <source>title.contact_delete</source>
+                <target>Delete contact</target>
+            </trans-unit>
+            <trans-unit id="title_contact_details">
+                <source>title.contact_details</source>
+                <target>Contact's details</target>
+            </trans-unit>
+            <trans-unit id="title_contact_edit">
+                <source>title.contact_edit</source>
+                <target>Edit contact</target>
+            </trans-unit>
+            <trans-unit id="title_contact_show_list">
+                <source>title.contact_list</source>
+                <target>Contact list</target>
+            </trans-unit>
             <trans-unit id="title_homepage">
                 <source>title.homepage</source>
                 <target>Homepage</target>
@@ -34,25 +54,93 @@
                 <source>global.action.back_to_list</source>
                 <target>Back to the list</target>
             </trans-unit>
+            <trans-unit id="global_action_delete">
+                <source>global.action.delete</source>
+                <target>Delete</target>
+            </trans-unit>
+            <trans-unit id="global_action_show_details">
+                <source>global.action.show_details</source>
+                <target>Show details</target>
+            </trans-unit>
+            <trans-unit id="global_label_address">
+                <source>global.label.address</source>
+                <target>Address</target>
+            </trans-unit>
+            <trans-unit id="global_label_actions">
+                <source>global.label.actions</source>
+                <target>Actions</target>
+            </trans-unit>
+            <trans-unit id="global_label_created_at">
+                <source>global.label.created_at</source>
+                <target>Created at</target>
+            </trans-unit>
+            <trans-unit id="global_label_first_name">
+                <source>global.label.first_name</source>
+                <target>First name</target>
+            </trans-unit>
+            <trans-unit id="global_label_last_name">
+                <source>global.label.last_name</source>
+                <target>Last name</target>
+            </trans-unit>
+            <trans-unit id="global_label_phone">
+                <source>global.label.phone</source>
+                <target>Telephone</target>
+            </trans-unit>
+            <trans-unit id="global_label_updated_at">
+                <source>global.label.updated_at</source>
+                <target>Updated at</target>
+            </trans-unit>
+            <trans-unit id="global_message.empty_list">
+                <source>global.message.empty_list</source>
+                <target>No records found.</target>
+            </trans-unit>
+            <trans-unit id="form_label_address">
+                <source>form.label.address</source>
+                <target>Address</target>
+            </trans-unit>
             <trans-unit id="form_label_email">
                 <source>form.label.email</source>
                 <target>E-mail</target>
             </trans-unit>
-            <trans-unit id="form_label_password">
-                <source>form.label.password</source>
-                <target>Password</target>
+            <trans-unit id="form_label_first_name">
+                <source>form.label.first_name</source>
+                <target>First name</target>
             </trans-unit>
-            <trans-unit id="form_label_remember_me">
-                <source>form.label.remember_me</source>
-                <target>Remember me</target>
+            <trans-unit id="form_label_last_name">
+                <source>form.label.last_name</source>
+                <target>Last name</target>
             </trans-unit>
             <trans-unit id="form_action_login">
                 <source>form.action.login</source>
                 <target>Sign in</target>
             </trans-unit>
+            <trans-unit id="form_label_password">
+                <source>form.label.password</source>
+                <target>Password</target>
+            </trans-unit>
+            <trans-unit id="form_label_phone">
+                <source>form.label.phone</source>
+                <target>Phone</target>
+            </trans-unit>
+            <trans-unit id="form_label_remember_me">
+                <source>form.label.remember_me</source>
+                <target>Remember me</target>
+            </trans-unit>
+            <trans-unit id="form_action_create">
+                <source>form.action.create</source>
+                <target>Create</target>
+            </trans-unit>
+            <trans-unit id="form_action_delete">
+                <source>form.action.delete</source>
+                <target>Delete</target>
+            </trans-unit>
             <trans-unit id="form_action_save">
                 <source>form.action.save</source>
                 <target>Save</target>
+            </trans-unit>
+            <trans-unit id="message_form_error">
+                <source>message_form_error</source>
+                <target>Error! Please provide correct values.</target>
             </trans-unit>
         </body>
     </file>

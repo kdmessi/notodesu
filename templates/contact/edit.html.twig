@@ -1,0 +1,10 @@
+{% include 'default/_form.html.twig' with {
+    page_title: 'title.contact_edit',
+    page_title_param: { '%id%': contact.id },
+    attr: {
+        method: 'PUT',
+        action: url('contact_edit', {'id': contact.id}),
+    },
+    form: form,
+    back_to_list_path: 'contact_index',
+} %}

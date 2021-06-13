@@ -1,0 +1,9 @@
+{% include 'default/_form.html.twig' with {
+    page_title: 'title.contact_create',
+    attr: {
+        method: 'POST',
+        action: url('contact_create')
+    },
+    submit_label: 'form.action.create'|trans,
+    back_to_list_path: 'contact_index',
+} %}
