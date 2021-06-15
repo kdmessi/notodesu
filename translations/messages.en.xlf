@@ -43,6 +43,26 @@
                 <source>title.contact_list</source>
                 <target>Contact list</target>
             </trans-unit>
+            <trans-unit id="title_event_create">
+                <source>title.event_create</source>
+                <target>Create event</target>
+            </trans-unit>
+            <trans-unit id="title_event_delete">
+                <source>title.event_delete</source>
+                <target>Delete event #%id%</target>
+            </trans-unit>
+            <trans-unit id="title_event_details">
+                <source>title.event_details</source>
+                <target>Event details #%id%</target>
+            </trans-unit>
+            <trans-unit id="title_event_edit">
+                <source>title.event_edit</source>
+                <target>Edit event #%id%</target>
+            </trans-unit>
+            <trans-unit id="title_event_show_list">
+                <source>title.event_list</source>
+                <target>Events list</target>
+            </trans-unit>
             <trans-unit id="title_homepage">
                 <source>title.homepage</source>
                 <target>Homepage</target>
@@ -95,9 +115,17 @@
                 <source>global.label.actions</source>
                 <target>Actions</target>
             </trans-unit>
+            <trans-unit id="global_label_category">
+                <source>global.label.category</source>
+                <target>Category</target>
+            </trans-unit>
             <trans-unit id="global_label_created_at">
                 <source>global.label.created_at</source>
                 <target>Created at</target>
+            </trans-unit>
+            <trans-unit id="global_label_date">
+                <source>global.label.date</source>
+                <target>Date</target>
             </trans-unit>
             <trans-unit id="global_label_first_name">
                 <source>global.label.first_name</source>
@@ -110,6 +138,10 @@
             <trans-unit id="global_label_last_name">
                 <source>global.label.last_name</source>
                 <target>Last name</target>
+            </trans-unit>
+            <trans-unit id="global_label_location">
+                <source>global.label.location</source>
+                <target>Location</target>
             </trans-unit>
             <trans-unit id="global_label_phone">
                 <source>global.label.phone</source>
@@ -159,6 +191,18 @@
                 <source>form.label.address</source>
                 <target>Address</target>
             </trans-unit>
+            <trans-unit id="form_label_category">
+                <source>form.label.category</source>
+                <target>Category</target>
+            </trans-unit>
+            <trans-unit id="form_label_contact">
+                <source>form.label.contact</source>
+                <target>Contact</target>
+            </trans-unit>
+            <trans-unit id="form_label_date">
+                <source>form.label.date</source>
+                <target>Date</target>
+            </trans-unit>
             <trans-unit id="form_label_email">
                 <source>form.label.email</source>
                 <target>E-mail</target>
@@ -170,6 +214,14 @@
             <trans-unit id="form_label_last_name">
                 <source>form.label.last_name</source>
                 <target>Last name</target>
+            </trans-unit>
+            <trans-unit id="form_label_none_select">
+                <source>form.label.none_select</source>
+                <target>-- choose --</target>
+            </trans-unit>
+            <trans-unit id="form_action_location">
+                <source>form.action.location</source>
+                <target>Location</target>
             </trans-unit>
             <trans-unit id="form_action_login">
                 <source>form.action.login</source>
@@ -187,6 +239,10 @@
                 <source>form.label.remember_me</source>
                 <target>Remember me</target>
             </trans-unit>
+            <trans-unit id="form_label_title">
+                <source>form.label.title</source>
+                <target>Title</target>
+            </trans-unit>
             <trans-unit id="form_action_create">
                 <source>form.action.create</source>
                 <target>Create</target>
@@ -202,6 +258,26 @@
             <trans-unit id="message_form_error">
                 <source>message_form_error</source>
                 <target>Error! Please provide correct values.</target>
+            </trans-unit>
+            <trans-unit id="Year">
+                <source>Year</source>
+                <target>Year</target>
+            </trans-unit>
+            <trans-unit id="Day">
+                <source>Day</source>
+                <target>Day</target>
+            </trans-unit>
+            <trans-unit id="Hour">
+                <source>Hour</source>
+                <target>Hour</target>
+            </trans-unit>
+            <trans-unit id="Minute">
+                <source>Minute</source>
+                <target>Minute</target>
+            </trans-unit>
+            <trans-unit id="Month">
+                <source>Month</source>
+                <target>Month</target>
             </trans-unit>
         </body>
     </file>

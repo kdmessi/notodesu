@@ -7,6 +7,8 @@ namespace App\Entity;
 
 use App\Repository\ContactRepository;
 use DateTimeInterface;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 use Gedmo\Mapping\Annotation as Gedmo;
@@ -109,6 +111,21 @@ class Contact
      * @Gedmo\Timestampable(on="update")
      */
     private DateTimeInterface $updatedAt;
+
+    /**
+     * Events.
+     *
+     * @ORM\ManyToMany(targetEntity=Event::class, mappedBy="contact")
+     */
+    private Collection $events;
+
+    /**
+     * Contact constructor.
+     */
+    public function __construct()
+    {
+        $this->events = new ArrayCollection();
+    }
 
     /**
      * Getter for id.
@@ -284,6 +301,49 @@ class Contact
     public function setUpdatedAt(DateTimeInterface $updatedAt): self
     {
         $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    /**
+     * Getter events.
+     *
+     * @return Collection|Event[]
+     */
+    public function getEvents(): Collection
+    {
+        return $this->events;
+    }
+
+    /**
+     * Add event.
+     *
+     * @param Event $event Event entity
+     *
+     * @return $this
+     */
+    public function addEvent(Event $event): self
+    {
+        if (!$this->events->contains($event)) {
+            $this->events[] = $event;
+            $event->addContact($this);
+        }
+
+        return $this;
+    }
+
+    /**
+     * Remove event.
+     *
+     * @param Event $event Event entity
+     *
+     * @return $this
+     */
+    public function removeEvent(Event $event): self
+    {
+        if ($this->events->removeElement($event)) {
+            $event->removeContact($this);
+        }
 
         return $this;
     }

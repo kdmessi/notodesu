@@ -69,14 +69,4 @@ class UserFixtures extends AbstractBaseFixture
 
         $manager->flush();
     }
-
-    /**
-     * Get order.
-     *
-     * @return int
-     */
-    public function getOrder(): int
-    {
-        return 0;
-    }
 }

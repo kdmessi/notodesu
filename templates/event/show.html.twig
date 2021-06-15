@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'title.event_details'|trans({'%id%': event.id|default('')}) }}
+{% endblock %}
+
+{% block body %}
+    <h1>{{ 'title.event_details'|trans({'%id%': event.id|default('')}) }}</h1>
+
+    {% if event is defined and event|length %}
+        <dl class="dl-horizontal">
+            <dt>{{ 'global.label.id'|trans }}</dt>
+            <dd>{{ event.id }}</dd>
+            <dt>{{ 'global.label.title'|trans }}</dt>
+            <dd>{{ event.title }}</dd>
+            <dt>{{ 'global.label.location'|trans }}</dt>
+            <dd>{{ event.location }}</dd>
+            <dt>{{ 'global.label.date'|trans }}</dt>
+            <dd>{{ event.date|format_date('long') }}</dd>
+            <dt>{{ 'global.label.category'|trans }}</dt>
+            <dd>{{ event.category.title }}</dd>
+            <dt>{{ 'global.label.created_at'|trans }}</dt>
+            <dd>{{ event.createdAt|format_date('long') }}</dd>
+            <dt>{{ 'global.label.updated_at'|trans }}</dt>
+            <dd>{{ event.updatedAt|format_date('long') }}</dd>
+        </dl>
+        <p>
+            <a href="{{ url('event_index') }}" title="{{ 'global.action.back_to_list'|trans }}">
+                {{ 'global.action.back_to_list'|trans }}
+            </a>
+        </p>
+    {% else %}
+        <p>
+            {{ 'global.message.empty_item'|trans }}
+        </p>
+    {% endif %}
+{% endblock %}

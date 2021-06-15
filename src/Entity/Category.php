@@ -6,6 +6,8 @@
 namespace App\Entity;
 
 use DateTimeInterface;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
@@ -64,6 +66,21 @@ class Category
      * )
      */
     private string $title;
+
+    /**
+     * Events.
+     *
+     * @ORM\OneToMany(targetEntity=Event::class, mappedBy="category")
+     */
+    private Collection $events;
+
+    /**
+     * Category constructor.
+     */
+    public function __construct()
+    {
+        $this->events = new ArrayCollection();
+    }
 
     /**
      * Getter for Id.
@@ -133,5 +150,51 @@ class Category
     public function setTitle(string $title): void
     {
         $this->title = $title;
+    }
+
+    /**
+     * Getter events.
+     *
+     * @return Collection|Event[]
+     */
+    public function getEvents(): Collection
+    {
+        return $this->events;
+    }
+
+    /**
+     * Add event.
+     *
+     * @param Event $event Event entity
+     *
+     * @return $this
+     */
+    public function addEvent(Event $event): self
+    {
+        if (!$this->events->contains($event)) {
+            $this->events[] = $event;
+            $event->setCategory($this);
+        }
+
+        return $this;
+    }
+
+    /**
+     * Remove event.
+     *
+     * @param Event $event Event entity
+     *
+     * @return $this
+     */
+    public function removeEvent(Event $event): self
+    {
+        if ($this->events->removeElement($event)) {
+            // set the owning side to null (unless already changed)
+            if ($event->getCategory() === $this) {
+                $event->setCategory(null);
+            }
+        }
+
+        return $this;
     }
 }

@@ -1,23 +1,23 @@
 <?php
 /**
- * Contact repository.
+ * Event repository.
  */
 
 namespace App\Repository;
 
-use App\Entity\Contact;
+use App\Entity\Event;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\ORM\OptimisticLockException;
 use Doctrine\ORM\ORMException;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @method Contact|null find($id, $lockMode = null, $lockVersion = null)
- * @method Contact|null findOneBy(array $criteria, array $orderBy = null)
- * @method Contact[]    findAll()
- * @method Contact[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Event|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Event|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Event[]    findAll()
+ * @method Event[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class ContactRepository extends ServiceEntityRepository
+class EventRepository extends ServiceEntityRepository
 {
     /**
      * Items per page.
@@ -31,53 +31,53 @@ class ContactRepository extends ServiceEntityRepository
     public const PAGINATOR_ITEMS_PER_PAGE = 10;
 
     /**
-     * ContactRepository constructor.
+     * EventRepository constructor.
      *
      * @param ManagerRegistry $registry
      */
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Contact::class);
+        parent::__construct($registry, Event::class);
     }
 
     /**
      * Save record.
      *
-     * @param Contact $contact Contact entity
+     * @param Event $event Event entity
      *
      * @throws ORMException
      * @throws OptimisticLockException
      */
-    public function save(Contact $contact): void
+    public function save(Event $event): void
     {
-        $this->_em->persist($contact);
-        $this->_em->flush($contact);
+        $this->_em->persist($event);
+        $this->_em->flush($event);
     }
 
     /**
      * Delete record.
      *
-     * @param Contact $contact Contact entity
+     * @param Event $event Event entity
      *
      * @throws ORMException
      * @throws OptimisticLockException
      */
-    public function delete(Contact $contact): void
+    public function delete(Event $event): void
     {
-        $this->_em->remove($contact);
-        $this->_em->flush($contact);
+        $this->_em->remove($event);
+        $this->_em->flush($event);
     }
 
     // /**
-    //  * @return Contact[] Returns an array of Contact objects
+    //  * @return Event[] Returns an array of Event objects
     //  */
     /*
     public function findByExampleField($value)
     {
-        return $this->createQueryBuilder('c')
-            ->andWhere('c.exampleField = :val')
+        return $this->createQueryBuilder('e')
+            ->andWhere('e.exampleField = :val')
             ->setParameter('val', $value)
-            ->orderBy('c.id', 'ASC')
+            ->orderBy('e.id', 'ASC')
             ->setMaxResults(10)
             ->getQuery()
             ->getResult()
@@ -86,10 +86,10 @@ class ContactRepository extends ServiceEntityRepository
     */
 
     /*
-    public function findOneBySomeField($value): ?Contact
+    public function findOneBySomeField($value): ?Event
     {
-        return $this->createQueryBuilder('c')
-            ->andWhere('c.exampleField = :val')
+        return $this->createQueryBuilder('e')
+            ->andWhere('e.exampleField = :val')
             ->setParameter('val', $value)
             ->getQuery()
             ->getOneOrNullResult()

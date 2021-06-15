@@ -7,12 +7,13 @@ namespace App\DataFixtures;
 
 use App\Entity\Contact;
 use App\Entity\User;
+use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 use Doctrine\Persistence\ObjectManager;
 
 /**
  * Class ContactFixtures.
  */
-class ContactFixtures extends AbstractBaseFixture
+class ContactFixtures extends AbstractBaseFixture implements DependentFixtureInterface
 {
     /**
      * Load data.
@@ -24,12 +25,12 @@ class ContactFixtures extends AbstractBaseFixture
         /** @var User $user */
         $user = $this->getReference(sprintf('%s_%d', UserFixtures::SIMPLE_USER_REFERENCE, 0));
 
-        $this->createMany(50, 'contacts', function () use ($user) {
+        $this->createMany(50, Contact::class, function () use ($user) {
             $contact = new Contact();
-            $contact->setFirstName($this->faker->word);
-            $contact->setLastName($this->faker->word);
-            $contact->setAddress($this->faker->address);
-            $contact->setPhone($this->faker->phoneNumber);
+            $contact->setFirstName($this->faker->firstName);
+            $contact->setLastName($this->faker->unique()->lastName);
+            $contact->setAddress($this->faker->unique()->address);
+            $contact->setPhone($this->faker->unique()->phoneNumber);
             $contact->setUser($user);
 
             return $contact;
@@ -48,15 +49,5 @@ class ContactFixtures extends AbstractBaseFixture
         return [
             UserFixtures::class,
         ];
-    }
-
-    /**
-     * Get order.
-     *
-     * @return int
-     */
-    public function getOrder(): int
-    {
-        return 1;
     }
 }

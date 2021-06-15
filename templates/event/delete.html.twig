@@ -1,0 +1,11 @@
+{% include 'default/_form.html.twig' with {
+    page_title: 'title.event_delete',
+    page_title_param: { '%id%': event.id },
+    attr: {
+        method: 'DELETE',
+        action: url('event_delete', {'id': event.id}),
+    },
+    form: form,
+    submit_label: 'form.action.delete'|trans,
+    back_to_list_path: 'event_index',
+} %}

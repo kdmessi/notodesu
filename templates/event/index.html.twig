@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{{ 'title.contact_list' | trans }}{% endblock %}
+{% block title %}{{ 'title.event_list' | trans }}{% endblock %}
 
 {% block body %}
-    <h1>{{ 'title.contact_list' | trans }}</h1>
+    <h1>{{ 'title.event_list' | trans }}</h1>
 
     {% if pagination is defined and pagination.items|length %}
         <div class="navigation text-center">
@@ -13,34 +13,34 @@
         <table class="table table-striped">
             <thead>
             <tr>
-                <th>{{ knp_pagination_sortable(pagination,'global.label.first_name'|trans, 'firstName') }}</th>
-                <th>{{ knp_pagination_sortable(pagination,'global.label.last_name'|trans, 'lastName')
+                <th>{{ knp_pagination_sortable(pagination,'global.label.title'|trans, 'title') }}</th>
+                <th>{{ knp_pagination_sortable(pagination,'global.label.location'|trans, 'location')
                     }}</th>
-                <th>{{ knp_pagination_sortable(pagination,'global.label.phone'|trans, 'phone') }}</th>
-                <th>{{ knp_pagination_sortable(pagination,'global.label.address'|trans, 'address') }}</th>
+                <th>{{ knp_pagination_sortable(pagination,'global.label.date'|trans, 'date') }}</th>
+                <th>{{ knp_pagination_sortable(pagination,'global.label.category'|trans, 'category') }}</th>
                 <th>{{ knp_pagination_sortable(pagination,'global.label.created_at'|trans, 'createdAt') }}</th>
                 <th>{{ knp_pagination_sortable(pagination,'global.label.updated_at'|trans, 'updatedAt') }}</th>
                 <th>{{ 'global.label.actions'|trans }}</th>
             </tr>
             </thead>
             <tbody>
-            {% for contact in pagination.items %}
+            {% for event in pagination.items %}
                 <tr>
-                    <td>{{ contact.firstName }}</td>
-                    <td>{{ contact.lastName }}</td>
-                    <td>{{ contact.phone }}</td>
-                    <td>{{ contact.address }}</td>
-                    <td>{{ contact.createdAt ? contact.createdAt|date('Y-m-d H:i:s') : '' }}</td>
-                    <td>{{ contact.updatedAt ? contact.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+                    <td>{{ event.title }}</td>
+                    <td>{{ event.location }}</td>
+                    <td>{{ event.date|format_date('long') }}</td>
+                    <td>{{ event.category.title }}</td>
+                    <td>{{ event.createdAt ? event.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+                    <td>{{ event.updatedAt ? event.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
                     <td>
-                        <a href="{{ url('contact_show', {id: contact.id}) }}" title="{{ 'title.contact_details'|trans }}">
+                        <a href="{{ url('event_show', {id: event.id}) }}" title="{{ 'title.event_details'|trans }}">
                             {{ 'global.action.show_details'|trans }}
                         </a>
-                        <a href="{{ url('contact_edit', {id: contact.id}) }}" title="{{ 'title.contact_edit'|trans
+                        <a href="{{ url('event_edit', {id: event.id}) }}" title="{{ 'title.event_edit'|trans
                         }}">
                             {{ 'global.action.edit'|trans }}
                         </a>
-                        <a href="{{ url('contact_delete', {id: contact.id}) }}" title="{{ 'title.contact_delete'|trans
+                        <a href="{{ url('event_delete', {id: event.id}) }}" title="{{ 'title.event_delete'|trans
                         }}">
                             {{ 'global.action.delete'|trans }}
                         </a>
