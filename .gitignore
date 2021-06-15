@@ -41,3 +41,7 @@
 npm-debug.log
 yarn-error.log
 ###< symfony/webpack-encore-bundle ###
+
+###> symfony php version ###
+.php-version
+###< symfony php version ###
