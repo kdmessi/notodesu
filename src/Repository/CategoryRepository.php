@@ -1,23 +1,23 @@
 <?php
 /**
- * Contact repository.
+ * Category repository.
  */
 
 namespace App\Repository;
 
-use App\Entity\Contact;
+use App\Entity\Category;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\ORM\OptimisticLockException;
 use Doctrine\ORM\ORMException;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @method Contact|null find($id, $lockMode = null, $lockVersion = null)
- * @method Contact|null findOneBy(array $criteria, array $orderBy = null)
- * @method Contact[]    findAll()
- * @method Contact[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Category|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Category|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Category[]    findAll()
+ * @method Category[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class ContactRepository extends ServiceEntityRepository
+class CategoryRepository extends ServiceEntityRepository
 {
     /**
      * Items per page.
@@ -31,44 +31,44 @@ class ContactRepository extends ServiceEntityRepository
     public const PAGINATOR_ITEMS_PER_PAGE = 10;
 
     /**
-     * ContactRepository constructor.
+     * CategoryRepository constructor.
      * @param ManagerRegistry $registry
      */
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Contact::class);
+        parent::__construct($registry, Category::class);
     }
 
     /**
      * Save record.
      *
-     * @param Contact $contact Contact entity
+     * @param Category $category Category entity
      *
      * @throws ORMException
      * @throws OptimisticLockException
      */
-    public function save(Contact $contact): void
+    public function save(Category $category): void
     {
-        $this->_em->persist($contact);
-        $this->_em->flush($contact);
+        $this->_em->persist($category);
+        $this->_em->flush($category);
     }
 
     /**
      * Delete record.
      *
-     * @param Contact $contact Contact entity
+     * @param Category $category Category entity
      *
      * @throws ORMException
      * @throws OptimisticLockException
      */
-    public function delete(Contact $contact): void
+    public function delete(Category $category): void
     {
-        $this->_em->remove($contact);
-        $this->_em->flush($contact);
+        $this->_em->remove($category);
+        $this->_em->flush($category);
     }
 
     // /**
-    //  * @return Contact[] Returns an array of Contact objects
+    //  * @return Category[] Returns an array of Category objects
     //  */
     /*
     public function findByExampleField($value)
@@ -85,7 +85,7 @@ class ContactRepository extends ServiceEntityRepository
     */
 
     /*
-    public function findOneBySomeField($value): ?Contact
+    public function findOneBySomeField($value): ?Category
     {
         return $this->createQueryBuilder('c')
             ->andWhere('c.exampleField = :val')

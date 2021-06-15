@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'title.category_list' | trans }}{% endblock %}
+
+{% block body %}
+    <h1>{{ 'title.category_list' | trans }}</h1>
+
+    {% if pagination is defined and pagination.items|length %}
+        <div class="navigation text-center">
+            {{ knp_pagination_render(pagination) }}
+        </div>
+
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Lp.</th>
+                <th>{{ knp_pagination_sortable(pagination,'global.label.title'|trans, 'title') }}</th>
+                <th>{{ knp_pagination_sortable(pagination,'global.label.created_at'|trans, 'createdAt') }}</th>
+                <th>{{ knp_pagination_sortable(pagination,'global.label.updated_at'|trans, 'updatedAt') }}</th>
+                <th>{{ 'global.label.actions'|trans }}</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for category in pagination.items %}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{ category.title }}</td>
+                    <td>{{ category.createdAt ? category.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+                    <td>{{ category.updatedAt ? category.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+                    <td>
+                        <a href="{{ url('category_show', {id: category.id}) }}" title="{{ 'title.category_details'|trans }}">
+                            {{ 'global.action.show_details'|trans }}
+                        </a>
+                        <a href="{{ url('category_edit', {id: category.id}) }}" title="{{ 'title.category_edit'|trans
+                        }}">
+                            {{ 'global.action.edit'|trans }}
+                        </a>
+                        <a href="{{ url('category_delete', {id: category.id}) }}" title="{{ 'title.category_delete'|trans
+                        }}">
+                            {{ 'global.action.delete'|trans }}
+                        </a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+        <div class="navigation text-center">
+            {{ knp_pagination_render(pagination) }}
+        </div>
+    {% else %}
+        <p>
+            {{ 'global.message.empty_list'|trans }}
+        </p>
+    {% endif %}
+{% endblock %}

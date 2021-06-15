@@ -42,3 +42,42 @@
 
     <a href="{{ path('contact_edit', {'id': contact.id}) }}">edit</a>
 {% endblock %}
+
+
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'title.contact_details'|trans({'%id%': contact.id|default('')}) }}
+{% endblock %}
+
+{% block body %}
+    <h1>{{ 'title.contact_details'|trans({'%id%': contact.id|default('')}) }}</h1>
+
+    {% if contact is defined and contact|length %}
+        <dl class="dl-horizontal">
+            <dt>{{ 'global.label.id'|trans }}</dt>
+            <dd>{{ contact.id }}</dd>
+            <dt>{{ 'global.label.first_name'|trans }}</dt>
+            <dd>{{ contact.firstName }}</dd>
+            <dt>{{ 'global.label.last_name'|trans }}</dt>
+            <dd>{{ contact.lastName }}</dd>
+            <dt>{{ 'global.label.address'|trans }}</dt>
+            <dd>{{ contact.address }}</dd>
+            <dt>{{ 'global.label.phone'|trans }}</dt>
+            <dd>{{ contact.phone }}</dd>
+            <dt>{{ 'global.label.created_at'|trans }}</dt>
+            <dd>{{ contact.createdAt|format_date('long') }}</dd>
+            <dt>{{ 'global.label.updated_at'|trans }}</dt>
+            <dd>{{ contact.updatedAt|format_date('long') }}</dd>
+        </dl>
+        <p>
+            <a href="{{ url('contact_index') }}" title="{{ 'global.action.back_to_list'|trans }}">
+                {{ 'global.action.back_to_list'|trans }}
+            </a>
+        </p>
+    {% else %}
+        <p>
+            {{ 'global.message.empty_item'|trans }}
+        </p>
+    {% endif %}
+{% endblock %}

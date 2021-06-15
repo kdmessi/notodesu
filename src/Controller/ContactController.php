@@ -94,7 +94,7 @@ class ContactController extends AbstractController
      *
      * @Route("/{id}", name="contact_show", methods={"GET"}, requirements={"id": "[1-9]\d*"})
      *
-     * @param Contact $contact Category entity
+     * @param Contact $contact Contact entity
      *
      * @return Response
      */

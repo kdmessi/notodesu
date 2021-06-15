@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'title.category_details'|trans({'%id%': category.id|default('')}) }}
+{% endblock %}
+
+{% block body %}
+    <h1>{{ 'title.category_details'|trans({'%id%': category.id|default('')}) }}</h1>
+
+    {% if category is defined and category|length %}
+        <dl class="dl-horizontal">
+            <dt>{{ 'global.label.id'|trans }}</dt>
+            <dd>{{ category.id }}</dd>
+            <dt>{{ 'global.label.title'|trans }}</dt>
+            <dd>{{ category.title }}</dd>
+            <dt>{{ 'global.label.created_at'|trans }}</dt>
+            <dd>{{ category.createdAt|format_date('long') }}</dd>
+            <dt>{{ 'global.label.updated_at'|trans }}</dt>
+            <dd>{{ category.updatedAt|format_date('long') }}</dd>
+        </dl>
+        <p>
+            <a href="{{ url('category_index') }}" title="{{ 'global.action.back_to_list'|trans }}">
+                {{ 'global.action.back_to_list'|trans }}
+            </a>
+        </p>
+        {% else %}
+        <p>
+            {{ 'global.message.empty_item'|trans }}
+        </p>
+    {% endif %}
+{% endblock %}

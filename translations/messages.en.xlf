@@ -2,21 +2,42 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
     <file source-language="pl" target-language="pl" datatype="plaintext" original="messages.pl.xlf">
         <body>
+
+            <trans-unit id="title_category_create">
+                <source>title.category_create</source>
+                <target>Create new category</target>
+            </trans-unit>
+            <trans-unit id="title_category_delete">
+                <source>title.category_delete</source>
+                <target>Delete category #%id%</target>
+            </trans-unit>
+            <trans-unit id="title_category_details">
+                <source>title.category_details</source>
+                <target>Category #%id% details</target>
+            </trans-unit>
+            <trans-unit id="title_category_edit">
+                <source>title.category_edit</source>
+                <target>Edit category #%id%</target>
+            </trans-unit>
+            <trans-unit id="title_category_show_list">
+                <source>title.category_list</source>
+                <target>Category list</target>
+            </trans-unit>
             <trans-unit id="title_contact_create">
                 <source>title.contact_create</source>
                 <target>Create new contact</target>
             </trans-unit>
             <trans-unit id="title_contact_delete">
                 <source>title.contact_delete</source>
-                <target>Delete contact</target>
+                <target>Delete contact #%id%</target>
             </trans-unit>
             <trans-unit id="title_contact_details">
                 <source>title.contact_details</source>
-                <target>Contact's details</target>
+                <target>Contact #%id% details</target>
             </trans-unit>
             <trans-unit id="title_contact_edit">
                 <source>title.contact_edit</source>
-                <target>Edit contact</target>
+                <target>Edit contact #%id%</target>
             </trans-unit>
             <trans-unit id="title_contact_show_list">
                 <source>title.contact_list</source>
@@ -54,6 +75,10 @@
                 <source>global.action.back_to_list</source>
                 <target>Back to the list</target>
             </trans-unit>
+            <trans-unit id="global_action_edit">
+                <source>global.action.edit</source>
+                <target>Edit</target>
+            </trans-unit>
             <trans-unit id="global_action_delete">
                 <source>global.action.delete</source>
                 <target>Delete</target>
@@ -78,6 +103,10 @@
                 <source>global.label.first_name</source>
                 <target>First name</target>
             </trans-unit>
+            <trans-unit id="global_label_id">
+                <source>global.label.id</source>
+                <target>Id</target>
+            </trans-unit>
             <trans-unit id="global_label_last_name">
                 <source>global.label.last_name</source>
                 <target>Last name</target>
@@ -86,9 +115,41 @@
                 <source>global.label.phone</source>
                 <target>Telephone</target>
             </trans-unit>
+            <trans-unit id="global_label_title">
+                <source>global.label.title</source>
+                <target>Title</target>
+            </trans-unit>
             <trans-unit id="global_label_updated_at">
                 <source>global.label.updated_at</source>
                 <target>Updated at</target>
+            </trans-unit>
+            <trans-unit id="global_message.category_created_success">
+                <source>global.message.category_created.success</source>
+                <target>Category was created successfully.</target>
+            </trans-unit>
+            <trans-unit id="global_message.category_deleted_success">
+                <source>global.message.category_deleted.success</source>
+                <target>Category was deleted successfully.</target>
+            </trans-unit>
+            <trans-unit id="global_message.category_updated_success">
+                <source>global.message.category_updated.success</source>
+                <target>Category was updated successfully.</target>
+            </trans-unit>
+            <trans-unit id="global_message.contact_created_success">
+                <source>global.message.contact_created.success</source>
+                <target>Contact was created successfully.</target>
+            </trans-unit>
+            <trans-unit id="global_message.contact_deleted_success">
+                <source>global.message.contact_deleted.success</source>
+                <target>Contact was deleted successfully.</target>
+            </trans-unit>
+            <trans-unit id="global_message.contact_updated_success">
+                <source>global.message.contact_updated.success</source>
+                <target>Contact was updated successfully.</target>
+            </trans-unit>
+            <trans-unit id="global_message.empty_item">
+                <source>global.message.empty_item</source>
+                <target>No record found.</target>
             </trans-unit>
             <trans-unit id="global_message.empty_list">
                 <source>global.message.empty_list</source>

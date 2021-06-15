@@ -2,21 +2,41 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
     <file source-language="pl" target-language="pl" datatype="plaintext" original="messages.pl.xlf">
         <body>
+            <trans-unit id="title_category_create">
+                <source>title.category_create</source>
+                <target>Dodawanie nowej kategorii</target>
+            </trans-unit>
+            <trans-unit id="title_category_delete">
+                <source>title.category_delete</source>
+                <target>Usuwanie kategorii #%id%</target>
+            </trans-unit>
+            <trans-unit id="title_category_details">
+                <source>title.category_details</source>
+                <target>Szczegóły kategorii #%id%</target>
+            </trans-unit>
+            <trans-unit id="title_category_edit">
+                <source>title.category_edit</source>
+                <target>Edycja kategorii #%id%</target>
+            </trans-unit>
+            <trans-unit id="title_category_show_list">
+                <source>title.category_list</source>
+                <target>Lista kategorii</target>
+            </trans-unit>
             <trans-unit id="title_contact_create">
                 <source>title.contact_create</source>
                 <target>Dodawanie nowego kontaktu</target>
             </trans-unit>
             <trans-unit id="title_contact_delete">
                 <source>title.contact_delete</source>
-                <target>Usuwanie kontaktu</target>
+                <target>Usuwanie kontaktu #%id%</target>
             </trans-unit>
             <trans-unit id="title_contact_details">
                 <source>title.contact_details</source>
-                <target>Szczegóły kontaktu</target>
+                <target>Szczegóły kontaktu #%id%</target>
             </trans-unit>
             <trans-unit id="title_contact_edit">
                 <source>title.contact_edit</source>
-                <target>Edycja kontaktu</target>
+                <target>Edycja kontaktu #%id%</target>
             </trans-unit>
             <trans-unit id="title_contact_show_list">
                 <source>title.contact_list</source>
@@ -54,29 +74,37 @@
                 <source>global.action.back_to_list</source>
                 <target>Wróć do listy</target>
             </trans-unit>
+            <trans-unit id="global_action_edit">
+                <source>global.action.edit</source>
+                <target>Edytuj</target>
+            </trans-unit>
             <trans-unit id="global_action_delete">
                 <source>global.action.delete</source>
-                <target>Delete</target>
+                <target>Usuń</target>
             </trans-unit>
             <trans-unit id="global_action_show_details">
                 <source>global.action.show_details</source>
-                <target>Show details</target>
+                <target>Szczegóły</target>
             </trans-unit>
             <trans-unit id="global_label_address">
                 <source>global.label.address</source>
-                <target>Address</target>
+                <target>Adres</target>
             </trans-unit>
             <trans-unit id="global_label_actions">
                 <source>global.label.actions</source>
-                <target>Actions</target>
+                <target>Akcje</target>
             </trans-unit>
             <trans-unit id="global_label_created_at">
                 <source>global.label.created_at</source>
-                <target>Created at</target>
+                <target>Utworzono</target>
             </trans-unit>
             <trans-unit id="global_label_first_name">
                 <source>global.label.first_name</source>
                 <target>Imię</target>
+            </trans-unit>
+            <trans-unit id="global_label_id">
+                <source>global.label.id</source>
+                <target>Id</target>
             </trans-unit>
             <trans-unit id="global_label_last_name">
                 <source>global.label.last_name</source>
@@ -86,9 +114,25 @@
                 <source>global.label.phone</source>
                 <target>Telefon</target>
             </trans-unit>
+            <trans-unit id="global_label_title">
+                <source>global.label.title</source>
+                <target>Tytuł</target>
+            </trans-unit>
             <trans-unit id="global_label_updated_at">
                 <source>global.label.updated_at</source>
                 <target>Zaktualizowano</target>
+            </trans-unit>
+            <trans-unit id="global_message.category_created_success">
+                <source>global.message.category_created.success</source>
+                <target>Pomyślnie dodano nową kategorię.</target>
+            </trans-unit>
+            <trans-unit id="global_message.category_deleted_success">
+                <source>global.message.category_deleted.success</source>
+                <target>Pomyślnie usunięto kategorię.</target>
+            </trans-unit>
+            <trans-unit id="global_message.category_updated_success">
+                <source>global.message.category_updated.success</source>
+                <target>Pomyślnie zaktualizowano kategorię.</target>
             </trans-unit>
             <trans-unit id="global_message.contact_created_success">
                 <source>global.message.contact_created.success</source>
@@ -101,6 +145,10 @@
             <trans-unit id="global_message.contact_updated_success">
                 <source>global.message.contact_updated.success</source>
                 <target>Pomyślnie zaktualizowano kontakt</target>
+            </trans-unit>
+            <trans-unit id="global_message.empty_item">
+                <source>global.message.empty_item</source>
+                <target>Nie znaleziono rekordu.</target>
             </trans-unit>
             <trans-unit id="global_message.empty_list">
                 <source>global.message.empty_list</source>

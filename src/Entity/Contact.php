@@ -36,7 +36,8 @@ class Contact
      * @Assert\Type(type="string")
      * @Assert\NotBlank
      * @Assert\Length(
-     *     min="2"
+     *     min="2",
+     *     max="50"
      * )
      * @Assert\Regex("/^[a-zA-Z\p{L}]+$/u")
      */
@@ -50,7 +51,8 @@ class Contact
      * @Assert\Type(type="string")
      * @Assert\NotBlank
      * @Assert\Length(
-     *     min="2"
+     *     min="2",
+     *     max="50"
      * )
      * @Assert\Regex("/^[a-zA-Z\p{L}]+$/u")
      */
