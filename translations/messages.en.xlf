@@ -219,6 +219,10 @@
                 <source>form.label.last_name</source>
                 <target>Last name</target>
             </trans-unit>
+            <trans-unit id="form_label_location">
+                <source>form.label.location</source>
+                <target>Location</target>
+            </trans-unit>
             <trans-unit id="form_label_none_select">
                 <source>form.label.none_select</source>
                 <target>-- choose --</target>
