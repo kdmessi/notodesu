@@ -5,6 +5,7 @@
 
 namespace App\Security;
 
+use App\Entity\User;
 use App\Repository\UserRepository;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -62,10 +63,10 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator implements P
     /**
      * LoginFormAuthenticator constructor.
      *
-     * @param \App\Repository\UserRepository $userRepository User repository
-     * @param \Symfony\Component\Routing\Generator\UrlGeneratorInterface $urlGenerator URL generator
-     * @param \Symfony\Component\Security\Csrf\CsrfTokenManagerInterface $csrfTokenManager CSRF token manager
-     * @param \Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface $passwordEncoder Password encoder
+     * @param \App\Repository\UserRepository                                        $userRepository   User repository
+     * @param \Symfony\Component\Routing\Generator\UrlGeneratorInterface            $urlGenerator     URL generator
+     * @param \Symfony\Component\Security\Csrf\CsrfTokenManagerInterface            $csrfTokenManager CSRF token manager
+     * @param \Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface $passwordEncoder  Password encoder
      */
     public function __construct(UserRepository $userRepository, UrlGeneratorInterface $urlGenerator, CsrfTokenManagerInterface $csrfTokenManager, UserPasswordEncoderInterface $passwordEncoder)
     {
@@ -117,12 +118,12 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator implements P
     /**
      * Get user.
      *
-     * @param mixed $credentials Credentials
+     * @param mixed                                                       $credentials  Credentials
      * @param \Symfony\Component\Security\Core\User\UserProviderInterface $userProvider User provider
      *
-     * @return \App\Entity\User|null Result
+     * @return User|null Result
      */
-    public function getUser($credentials, UserProviderInterface $userProvider)
+    public function getUser($credentials, UserProviderInterface $userProvider): ?User
     {
         $token = new CsrfToken('authenticate', $credentials['csrf_token']);
         if (!$this->csrfTokenManager->isTokenValid($token)) {
@@ -141,8 +142,8 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator implements P
     /**
      * Checks credentials.
      *
-     * @param mixed $credentials Credentials
-     * @param \Symfony\Component\Security\Core\User\UserInterface $user User
+     * @param mixed                                               $credentials Credentials
+     * @param \Symfony\Component\Security\Core\User\UserInterface $user        User
      *
      * @return bool Result
      */
@@ -166,9 +167,9 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator implements P
     /**
      * Called when authentication executed and was successful!
      *
-     * @param \Symfony\Component\HttpFoundation\Request $request HTTP request
-     * @param \Symfony\Component\Security\Core\Authentication\Token\TokenInterface $token Authentication token
-     * @param string $providerKey The key of the firewall
+     * @param \Symfony\Component\HttpFoundation\Request                            $request     HTTP request
+     * @param \Symfony\Component\Security\Core\Authentication\Token\TokenInterface $token       Authentication token
+     * @param string                                                               $providerKey The key of the firewall
      *
      * @return \Symfony\Component\HttpFoundation\RedirectResponse Redirect response
      *

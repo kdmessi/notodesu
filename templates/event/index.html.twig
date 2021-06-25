@@ -29,7 +29,12 @@
                     <td>{{ event.title }}</td>
                     <td>{{ event.location }}</td>
                     <td>{{ event.date|format_date('long') }}</td>
-                    <td>{{ event.category.title }}</td>
+                    <td>
+                        <a href="{{ url('event_index', {'filters.category_id' : event.category.id}) }}" title="{{ event
+                        .category.title }}">
+                            {{ event.category.title }}
+                        </a>
+                    </td>
                     <td>{{ event.createdAt ? event.createdAt|date('Y-m-d H:i:s') : '' }}</td>
                     <td>{{ event.updatedAt ? event.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
                     <td>

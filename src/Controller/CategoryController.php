@@ -7,10 +7,9 @@ namespace App\Controller;
 
 use App\Entity\Category;
 use App\Form\CategoryType;
-use App\Repository\CategoryRepository;
+use App\Service\CategoryService;
 use Doctrine\ORM\OptimisticLockException;
 use Doctrine\ORM\ORMException;
-use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -22,24 +21,33 @@ use Symfony\Component\Routing\Annotation\Route;
 class CategoryController extends AbstractController
 {
     /**
+     * Category service.
+     *
+     * @var CategoryService
+     */
+    private CategoryService $categoryService;
+
+    /**
+     * CategoryController constructor.
+     *
+     * @param CategoryService $categoryService Category service
+     */
+    public function __construct(CategoryService $categoryService)
+    {
+        $this->categoryService = $categoryService;
+    }
+
+    /**
      * @Route("/", name="category_index", methods={"GET"})
      *
-     * @param Request            $request            HTTP request
-     * @param CategoryRepository $categoryRepository Category repository
-     * @param PaginatorInterface $paginator          Paginator
+     * @param Request $request HTTP request
      *
      * @return Response HTTP response
      */
-    public function index(Request $request, CategoryRepository $categoryRepository, PaginatorInterface $paginator): Response
+    public function index(Request $request): Response
     {
-        /** @var Category $categories */
-        $categories = $categoryRepository->findAll();
-
-        $pagination = $paginator->paginate(
-            $categories,
-            $request->query->getInt('page', 1),
-            CategoryRepository::PAGINATOR_ITEMS_PER_PAGE
-        );
+        $page = $request->query->getInt('page');
+        $pagination = $this->categoryService->createPaginatedList($page);
 
         return $this->render('category/index.html.twig', [
             'pagination' => $pagination,
@@ -49,22 +57,21 @@ class CategoryController extends AbstractController
     /**
      * @Route("/create", name="category_create", methods={"GET","POST"})
      *
-     * @param Request            $request            HTTP request
-     * @param CategoryRepository $categoryRepository Category repository
+     * @param Request $request HTTP request
      *
      * @return Response HTTP response
      *
      * @throws ORMException
      * @throws OptimisticLockException
      */
-    public function create(Request $request, CategoryRepository $categoryRepository): Response
+    public function create(Request $request): Response
     {
         $category = new Category();
         $form = $this->createForm(CategoryType::class, $category);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $categoryRepository->save($category);
+            $this->categoryService->save($category);
             $this->addFlash('success', 'global.message.category_created.success');
 
             return $this->redirectToRoute('category_index');
@@ -92,22 +99,21 @@ class CategoryController extends AbstractController
     /**
      * @Route("/{id}/edit", name="category_edit", methods={"GET","PUT"}, requirements={"id": "[1-9]\d*"})
      *
-     * @param Request            $request            HTTP request
-     * @param Category           $category           Category entity
-     * @param CategoryRepository $categoryRepository Category repository
+     * @param Request  $request  HTTP request
+     * @param Category $category Category entity
      *
      * @return Response HTTP response
      *
      * @throws ORMException
      * @throws OptimisticLockException
      */
-    public function edit(Request $request, Category $category, CategoryRepository $categoryRepository): Response
+    public function edit(Request $request, Category $category): Response
     {
         $form = $this->createForm(CategoryType::class, $category, ['method' => 'PUT']);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $categoryRepository->save($category);
+            $this->categoryService->save($category);
             $this->addFlash('success', 'global.message.category_updated.success');
 
             return $this->redirectToRoute('category_index');
@@ -122,16 +128,15 @@ class CategoryController extends AbstractController
     /**
      * @Route("/{id}/delete", name="category_delete", methods={"GET", "DELETE"}, requirements={"id": "[1-9]\d*"})
      *
-     * @param Request            $request            HTTP request
-     * @param Category           $category           Category entity
-     * @param CategoryRepository $categoryRepository Category repository
+     * @param Request  $request  HTTP request
+     * @param Category $category Category entity
      *
      * @return Response HTTP response
      *
      * @throws ORMException
      * @throws OptimisticLockException
      */
-    public function delete(Request $request, Category $category, CategoryRepository $categoryRepository): Response
+    public function delete(Request $request, Category $category): Response
     {
         $form = $this->createForm(CategoryType::class, $category, ['method' => 'PUT']);
         $form->handleRequest($request);
@@ -141,7 +146,7 @@ class CategoryController extends AbstractController
         }
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $categoryRepository->delete($category);
+            $this->categoryService->delete($category);
             $this->addFlash('success', 'global.message.category_deleted.success');
 
             return $this->redirectToRoute('category_index');

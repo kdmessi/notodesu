@@ -9,9 +9,9 @@ use App\Entity\Event;
 use App\Entity\User;
 use App\Form\EventType;
 use App\Repository\EventRepository;
+use App\Service\EventService;
 use Doctrine\ORM\OptimisticLockException;
 use Doctrine\ORM\ORMException;
-use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -23,28 +23,38 @@ use Symfony\Component\Routing\Annotation\Route;
 class EventController extends AbstractController
 {
     /**
+     * @var EventService Event service
+     */
+    private EventService $eventService;
+
+    /**
+     * TaskService constructor.
+     *
+     * @param EventService $eventService Event service
+     */
+    public function __construct(EventService $eventService)
+    {
+        $this->eventService = $eventService;
+    }
+
+    /**
      * Event list.
      *
      * @Route("/", name="event_index", methods={"GET"})
      *
-     * @param Request            $request         HTTP request
-     * @param EventRepository    $eventRepository Event repository
-     * @param PaginatorInterface $paginator       Paginator
+     * @param Request $request HTTP request
      *
      * @return Response HTTP response
      */
-    public function index(Request $request, EventRepository $eventRepository, PaginatorInterface $paginator): Response
+    public function index(Request $request): Response
     {
-        /** @var User $user */
-        $user = $this->getUser();
+        $filters = [];
+        $filters['category_id'] = $request->query->getInt('filters_category_id');
 
-        /** @var Event $events */
-        $events = $eventRepository->findBy(['user' => $user->getId()]);
-
-        $pagination = $paginator->paginate(
-            $events,
+        $pagination = $this->eventService->createPaginatedList(
             $request->query->getInt('page', 1),
-            EventRepository::PAGINATOR_ITEMS_PER_PAGE
+            $this->getUser(),
+            $filters
         );
 
         return $this->render('event/index.html.twig', [
@@ -75,7 +85,7 @@ class EventController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $event->setUser($user);
+            $event->setAuthor($user);
             $eventRepository->save($event);
             $this->addFlash('success', 'global.message.event_created.success');
 
@@ -187,7 +197,7 @@ class EventController extends AbstractController
         /** @var User $user */
         $user = $this->getUser();
 
-        if ($user->getId() !== $event->getUser()->getId()) {
+        if ($user->getId() !== $event->getAuthor()->getId()) {
             throw $this->createAccessDeniedException('Access Denied.');
         }
     }

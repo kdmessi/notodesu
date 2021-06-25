@@ -104,7 +104,7 @@ class Event
      * @ORM\ManyToOne(targetEntity=User::class, inversedBy="events")
      * @ORM\JoinColumn(nullable=false)
      */
-    private User $user;
+    private User $author;
 
     /**
      * Event constructor.
@@ -313,21 +313,21 @@ class Event
      *
      * @return User|null User
      */
-    public function getUser(): ?User
+    public function getAuthor(): ?User
     {
-        return $this->user;
+        return $this->author;
     }
 
     /**
      * Setter for user.
      *
-     * @param User $user User
+     * @param User $author User
      *
      * @return $this
      */
-    public function setUser(User $user): self
+    public function setAuthor(User $author): self
     {
-        $this->user = $user;
+        $this->author = $author;
 
         return $this;
     }

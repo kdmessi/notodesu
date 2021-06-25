@@ -105,7 +105,7 @@ class User implements UserInterface
     private $contacts;
 
     /**
-     * @ORM\OneToMany(targetEntity=Event::class, mappedBy="user")
+     * @ORM\OneToMany(targetEntity=Event::class, mappedBy="author")
      */
     private $events;
 
@@ -243,6 +243,8 @@ class User implements UserInterface
     }
 
     /**
+     * Getter contacts.
+     *
      * @return Collection|Contact[]
      */
     public function getContacts(): Collection
@@ -251,7 +253,9 @@ class User implements UserInterface
     }
 
     /**
-     * @param Contact $contact
+     * Add contact.
+     *
+     * @param Contact $contact Contact entity
      *
      * @return $this
      */
@@ -266,7 +270,9 @@ class User implements UserInterface
     }
 
     /**
-     * @param Contact $contact
+     * Remove contact.
+     *
+     * @param Contact $contact Contact entity
      *
      * @return $this
      */
@@ -283,6 +289,8 @@ class User implements UserInterface
     }
 
     /**
+     * Getter events.
+     *
      * @return Collection|Event[]
      */
     public function getEvents(): Collection
@@ -290,22 +298,36 @@ class User implements UserInterface
         return $this->events;
     }
 
+    /**
+     * Add event.
+     *
+     * @param Event $event Event entity
+     *
+     * @return $this
+     */
     public function addEvent(Event $event): self
     {
         if (!$this->events->contains($event)) {
             $this->events[] = $event;
-            $event->setUser($this);
+            $event->setAuthor($this);
         }
 
         return $this;
     }
 
+    /**
+     * Remove event.
+     *
+     * @param Event $event Event entity
+     *
+     * @return $this
+     */
     public function removeEvent(Event $event): self
     {
         if ($this->events->removeElement($event)) {
             // set the owning side to null (unless already changed)
-            if ($event->getUser() === $this) {
-                $event->setUser(null);
+            if ($event->getAuthor() === $this) {
+                $event->setAuthor(null);
             }
         }
 

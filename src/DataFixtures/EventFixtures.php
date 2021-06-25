@@ -39,7 +39,7 @@ class EventFixtures extends AbstractBaseFixture implements DependentFixtureInter
 
             /** @var User $user */
             $user = $this->getRandomReference(UserFixtures::SIMPLE_USER_REFERENCE);
-            $event->setUser($user);
+            $event->setAuthor($user);
 
             return $event;
         });
