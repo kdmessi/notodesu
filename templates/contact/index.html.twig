@@ -3,7 +3,11 @@
 {% block title %}{{ 'title.contact_list' | trans }}{% endblock %}
 
 {% block body %}
-    <h1>{{ 'title.contact_list' | trans }}</h1>
+    <h1>
+        {{ 'title.contact_list' | trans }}
+        <a href="{{ url('contact_create') }}" class="btn btn-outline-primary">{{ 'global.action.add_new' | trans
+            }}</a>
+    </h1>
 
     {% if pagination is defined and pagination.items|length %}
         <div class="navigation text-center">

@@ -86,6 +86,10 @@
                 <source>global.welcome_message</source>
                 <target>Jesteś zalogowany jako %username%</target>
             </trans-unit>
+            <trans-unit id="global_action_add_new">
+                <source>global.action.add_new</source>
+                <target>Dodaj nowy</target>
+            </trans-unit>
             <trans-unit id="global_action_logout">
                 <source>global.action.logout</source>
                 <target>Wyloguj</target>

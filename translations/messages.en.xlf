@@ -87,6 +87,10 @@
                 <source>global.welcome_message</source>
                 <target>You are logged in as %username%</target>
             </trans-unit>
+            <trans-unit id="global_action_add_new">
+                <source>global.action.add_new</source>
+                <target>Add new</target>
+            </trans-unit>
             <trans-unit id="global_action_logout">
                 <source>global.action.logout</source>
                 <target>Logout</target>
