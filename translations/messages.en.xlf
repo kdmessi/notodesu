@@ -191,6 +191,18 @@
                 <source>global.message.empty_list</source>
                 <target>No records found.</target>
             </trans-unit>
+            <trans-unit id="global_message.event_created_success">
+                <source>global.message.event_created.success</source>
+                <target>Event was added successfully.</target>
+            </trans-unit>
+            <trans-unit id="global_message.event_deleted_success">
+                <source>global.message.event_deleted.success</source>
+                <target>Event was deleted successfully.</target>
+            </trans-unit>
+            <trans-unit id="global_message.event_updated_success">
+                <source>global.message.event_updated.success</source>
+                <target>Event was updated successfully.</target>
+            </trans-unit>
             <trans-unit id="form_label_address">
                 <source>form.label.address</source>
                 <target>Address</target>

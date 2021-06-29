@@ -1,4 +1,7 @@
 doctrine:
     dbal:
         # "TEST_TOKEN" is typically set by ParaTest
-        dbname: 'main_test%env(default::TEST_TOKEN)%'
+#        dbname: 'notodesu_test%env(default::TEST_TOKEN)%'
+#        url: "mysql://notodesu:notodesu1234@127.0.0.1:3306/notodesu_test?serverVersion=mariadb-10.5.6"
+        url: '%env(resolve:DATABASE_URL)%'
+

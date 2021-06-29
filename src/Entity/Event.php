@@ -6,6 +6,7 @@
 namespace App\Entity;
 
 use App\Repository\EventRepository;
+use DateTime;
 use DateTimeInterface;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
@@ -112,6 +113,8 @@ class Event
     public function __construct()
     {
         $this->contact = new ArrayCollection();
+        $this->setCreatedAt(new DateTime());
+        $this->setUpdatedAt(new DateTime());
     }
 
     /**

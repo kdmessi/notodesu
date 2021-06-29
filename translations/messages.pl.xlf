@@ -190,6 +190,18 @@
                 <source>global.message.empty_list</source>
                 <target>Nie znaleziono rekordów.</target>
             </trans-unit>
+            <trans-unit id="global_message.event_created_success">
+                <source>global.message.event_created.success</source>
+                <target>Pomyślnie dodano nowe wydarzenie.</target>
+            </trans-unit>
+            <trans-unit id="global_message.event_deleted_success">
+                <source>global.message.event_deleted.success</source>
+                <target>Pomyślnie usunięto wydarzenie</target>
+            </trans-unit>
+            <trans-unit id="global_message.event_updated_success">
+                <source>global.message.event_updated.success</source>
+                <target>Pomyślnie zaktualizowano wydarzenie</target>
+            </trans-unit>
             <trans-unit id="form_label_address">
                 <source>form.label.address</source>
                 <target>Adres</target>

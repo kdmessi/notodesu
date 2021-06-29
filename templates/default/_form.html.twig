@@ -30,7 +30,8 @@ parameters:
     {% endif %}
     {{ form_widget(form) }}
     <div class="form-group float-sm-right">
-        <input type="submit" value="{{ submit_label|default('form.action.save'|trans) }}" class="btn btn-primary"/>
+{#        <input type="submit" value="{{ submit_label|default('form.action.save'|trans) }}" class="btn btn-primary"/>#}
+        <button type="submit" class="btn btn-primary">{{ submit_label|default('form.action.save'|trans) }}</button>
     </div>
 
     {% if back_to_list_path|default(false) %}

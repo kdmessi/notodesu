@@ -10,13 +10,18 @@ use App\Form\CategoryType;
 use App\Service\CategoryService;
 use Doctrine\ORM\OptimisticLockException;
 use Doctrine\ORM\ORMException;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
+ * Class CategoryController.
+ *
  * @Route("/{_locale<%app.locales%>}/category")
+ *
+ * @IsGranted("ROLE_USER")
  */
 class CategoryController extends AbstractController
 {
@@ -46,7 +51,7 @@ class CategoryController extends AbstractController
      */
     public function index(Request $request): Response
     {
-        $page = $request->query->getInt('page');
+        $page = $request->query->getInt('page', 1);
         $pagination = $this->categoryService->createPaginatedList($page);
 
         return $this->render('category/index.html.twig', [
@@ -138,7 +143,7 @@ class CategoryController extends AbstractController
      */
     public function delete(Request $request, Category $category): Response
     {
-        $form = $this->createForm(CategoryType::class, $category, ['method' => 'PUT']);
+        $form = $this->createForm(CategoryType::class, $category, ['method' => 'DELETE']);
         $form->handleRequest($request);
 
         if ($request->isMethod('DELETE') && !$form->isSubmitted()) {

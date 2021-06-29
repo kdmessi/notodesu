@@ -83,7 +83,7 @@ class EventType extends AbstractType
                     },
                     'label' => 'form.label.contact',
                     'placeholder' => 'form.label.none_select',
-                    'required' => true,
+                    'required' => false,
                     'multiple' => true,
                 ]
             )

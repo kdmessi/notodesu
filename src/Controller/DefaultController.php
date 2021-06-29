@@ -10,8 +10,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * Class DefaultController
- * @package App\Controller
+ * Class DefaultController.
  */
 class DefaultController extends AbstractController
 {

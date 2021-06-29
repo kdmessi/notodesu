@@ -7,6 +7,8 @@ namespace App\Repository;
 
 use App\Entity\User;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\ORM\OptimisticLockException;
+use Doctrine\ORM\ORMException;
 use Doctrine\Persistence\ManagerRegistry;
 use function get_class;
 use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
@@ -50,6 +52,20 @@ class UserRepository extends ServiceEntityRepository implements PasswordUpgrader
         $user->setPassword($newEncodedPassword);
         $this->_em->persist($user);
         $this->_em->flush();
+    }
+
+    /**
+     * Save record.
+     *
+     * @param User $user User entity
+     *
+     * @throws ORMException
+     * @throws OptimisticLockException
+     */
+    public function save(User $user): void
+    {
+        $this->_em->persist($user);
+        $this->_em->flush($user);
     }
 
     // /**

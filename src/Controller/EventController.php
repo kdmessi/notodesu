@@ -8,17 +8,21 @@ namespace App\Controller;
 use App\Entity\Event;
 use App\Entity\User;
 use App\Form\EventType;
-use App\Repository\EventRepository;
 use App\Service\EventService;
 use Doctrine\ORM\OptimisticLockException;
 use Doctrine\ORM\ORMException;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
+ * Class EventController.
+ *
  * @Route("/{_locale<%app.locales%>}/event")
+ *
+ * @IsGranted("ROLE_USER")
  */
 class EventController extends AbstractController
 {
@@ -67,15 +71,14 @@ class EventController extends AbstractController
      *
      * @Route("/create", name="event_create", methods={"GET","POST"})
      *
-     * @param Request         $request         HTTP request
-     * @param EventRepository $eventRepository Event repository
+     * @param Request $request HTTP request
      *
      * @return Response HTTP response
      *
      * @throws ORMException
      * @throws OptimisticLockException
      */
-    public function create(Request $request, EventRepository $eventRepository): Response
+    public function create(Request $request): Response
     {
         /** @var User $user */
         $user = $this->getUser();
@@ -86,7 +89,7 @@ class EventController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $event->setAuthor($user);
-            $eventRepository->save($event);
+            $this->eventService->save($event);
             $this->addFlash('success', 'global.message.event_created.success');
 
             return $this->redirectToRoute('event_index');
@@ -120,23 +123,22 @@ class EventController extends AbstractController
      *
      * @Route("/{id}/edit", name="event_edit", methods={"GET","PUT"}, requirements={"id": "[1-9]\d*"})
      *
-     * @param Request         $request         HTTP request
-     * @param Event           $event           Event entity
-     * @param EventRepository $eventRepository Event repository
+     * @param Request $request HTTP request
+     * @param Event   $event   Event entity
      *
      * @return Response
      *
      * @throws ORMException
      * @throws OptimisticLockException
      */
-    public function edit(Request $request, Event $event, EventRepository $eventRepository): Response
+    public function edit(Request $request, Event $event): Response
     {
         $this->hasUserAccess($event);
         $form = $this->createForm(EventType::class, $event, ['method' => 'PUT']);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $eventRepository->save($event);
+            $this->eventService->save($event);
             $this->addFlash('success', 'global.message.event_updated.success');
 
             return $this->redirectToRoute('event_index');
@@ -153,21 +155,18 @@ class EventController extends AbstractController
      *
      * @Route("/{id}/delete", name="event_delete", methods={"GET", "DELETE"}, requirements={"id": "[1-9]\d*"})
      *
-     * @param Request         $request         HTTP request
-     * @param Event           $event           Event entity
-     * @param EventRepository $eventRepository Event repository
+     * @param Request $request HTTP request
+     * @param Event   $event   Event entity
      *
      * @return Response HTTP response
      *
      * @throws ORMException
      * @throws OptimisticLockException
      */
-    public function delete(Request $request, Event $event, EventRepository $eventRepository): Response
+    public function delete(Request $request, Event $event): Response
     {
         $this->hasUserAccess($event);
-
-        $this->hasUserAccess($event);
-        $form = $this->createForm(EventType::class, $event, ['method' => 'PUT']);
+        $form = $this->createForm(EventType::class, $event, ['method' => 'DELETE']);
         $form->handleRequest($request);
 
         if ($request->isMethod('DELETE') && !$form->isSubmitted()) {
@@ -175,13 +174,13 @@ class EventController extends AbstractController
         }
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $eventRepository->delete($event);
+            $this->eventService->delete($event);
             $this->addFlash('success', 'global.message.event_deleted.success');
 
             return $this->redirectToRoute('event_index');
         }
 
-        return $this->render('event/edit.html.twig', [
+        return $this->render('event/delete.html.twig', [
             'event' => $event,
             'form' => $form->createView(),
         ]);
