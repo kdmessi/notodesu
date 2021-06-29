@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Documentation</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <base href="../">
+    <link href="images/favicon.ico" rel="icon"/>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/base.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap"
+          rel="stylesheet">
+    <link href="css/template.css" rel="stylesheet">
+    <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css"
+          integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@3.4.6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script crossorigin="anonymous" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk="
+            src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js"></script>
+    <script src="js/search.js"></script>
+    <script defer src="js/searchIndex.js"></script>
+</head>
+<body id="top">
+<header class="phpdocumentor-header phpdocumentor-section">
+    <h1 class="phpdocumentor-title"><a class="phpdocumentor-title__link" href="">Documentation</a></h1>
+    <input class="phpdocumentor-header__menu-button" id="menu-button" name="menu-button" type="checkbox"/>
+    <label class="phpdocumentor-header__menu-icon" for="menu-button">
+        <i class="fas fa-bars"></i>
+    </label>
+    <section class="phpdocumentor-search" data-search-form>
+        <label>
+            <span class="visually-hidden">Search for</span>
+            <svg class="phpdocumentor-search__icon" fill="none" height="20" viewBox="0 0 21 20" width="21"
+                 xmlns="http://www.w3.org/2000/svg">
+                <circle cx="7.5" cy="7.5" r="6.5" stroke="currentColor" stroke-width="2"/>
+                <line stroke="currentColor" stroke-width="3" x1="12.4892" x2="19.1559" y1="12.2727" y2="18.9393"/>
+            </svg>
+            <input class="phpdocumentor-field phpdocumentor-search__field" disabled placeholder="Loading .."
+                   type="search"/>
+        </label>
+    </section>
+
+    <nav class="phpdocumentor-topnav">
+        <ul class="phpdocumentor-topnav__menu">
+        </ul>
+    </nav>
+</header>
+
+<main class="phpdocumentor">
+    <div class="phpdocumentor-section">
+        <input class="phpdocumentor-sidebar__menu-button" id="sidebar-button" name="sidebar-button" type="checkbox"/>
+        <label class="phpdocumentor-sidebar__menu-icon" for="sidebar-button">
+            Menu
+        </label>
+        <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+
+            <section class="phpdocumentor-sidebar__category">
+                <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/app.html"><abbr
+                        title="\App">App</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                    <li><a href="namespaces/app-controller.html"><abbr title="\App\Controller">Controller</abbr></a>
+                    </li>
+                    <li><a href="namespaces/app-datafixtures.html"><abbr
+                            title="\App\DataFixtures">DataFixtures</abbr></a></li>
+                    <li><a href="namespaces/app-entity.html"><abbr title="\App\Entity">Entity</abbr></a></li>
+                    <li><a href="namespaces/app-eventsubscriber.html"><abbr
+                            title="\App\EventSubscriber">EventSubscriber</abbr></a></li>
+                    <li><a href="namespaces/app-form.html"><abbr title="\App\Form">Form</abbr></a></li>
+                    <li><a href="namespaces/app-repository.html"><abbr title="\App\Repository">Repository</abbr></a>
+                    </li>
+                    <li><a href="namespaces/app-security.html"><abbr title="\App\Security">Security</abbr></a></li>
+                    <li><a href="namespaces/app-service.html"><abbr title="\App\Service">Service</abbr></a></li>
+                </ul>
+            </section>
+
+
+            <section class="phpdocumentor-sidebar__category">
+                <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="reports/deprecated.html">Deprecated</a></h3>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="reports/errors.html">Errors</a></h3>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="reports/markers.html">Markers</a></h3>
+            </section>
+
+            <section class="phpdocumentor-sidebar__category">
+                <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="indices/files.html">Files</a></h3>
+            </section>
+        </aside>
+
+        <div class="phpdocumentor-column -eight phpdocumentor-content">
+            <ul class="phpdocumentor-breadcrumbs">
+                <li class="phpdocumentor-breadcrumb"><a href="namespaces/app.html">App</a></li>
+                <li class="phpdocumentor-breadcrumb"><a href="namespaces/app-datafixtures.html">DataFixtures</a></li>
+            </ul>
+
+            <article class="phpdocumentor-element -class">
+                <h2 class="phpdocumentor-content__title">
+                    CategoryFixtures
+
+                    <span class="phpdocumentor-element__extends">
+        extends <a href="classes/App-DataFixtures-AbstractBaseFixture.html"><abbr
+                            title="\App\DataFixtures\AbstractBaseFixture">AbstractBaseFixture</abbr></a>
+    </span>
+
+
+                </h2>
+
+                <aside class="phpdocumentor-element-found-in">
+                    <abbr class="phpdocumentor-element-found-in__file" title="src/DataFixtures/CategoryFixtures.php"><a
+                            href="files/src-datafixtures-categoryfixtures.html"><abbr
+                            title="src/DataFixtures/CategoryFixtures.php">CategoryFixtures.php</abbr></a></abbr>
+                    :
+                    <span class="phpdocumentor-element-found-in__line">14</span>
+                </aside>
+
+                <p class="phpdocumentor-summary">Class CategoryFixtures.</p>
+
+                <section class="phpdocumentor-description"></section>
+
+
+                <h3 id="toc">
+                    Table of Contents
+                    <a class="headerlink" href="#toc"><i class="fas fa-link"></i></a>
+                </h3>
+
+                <dl class="phpdocumentor-table-of-contents">
+                    <dt class="phpdocumentor-table-of-contents__entry -property -protected">
+                        <a href="classes/App-DataFixtures-AbstractBaseFixture.html#property_faker">$faker</a>
+                        <span>
+                &nbsp;: <abbr title="\Faker\Generator">Generator</abbr>            </span>
+                    </dt>
+                    <dd>Faker.</dd>
+
+                    <dt class="phpdocumentor-table-of-contents__entry -property -protected">
+                        <a href="classes/App-DataFixtures-AbstractBaseFixture.html#property_manager">$manager</a>
+                        <span>
+                &nbsp;: <abbr title="\Doctrine\Persistence\ObjectManager">ObjectManager</abbr>            </span>
+                    </dt>
+                    <dd>Persistence object manager.</dd>
+
+                    <dt class="phpdocumentor-table-of-contents__entry -property -private">
+                        <a href="classes/App-DataFixtures-AbstractBaseFixture.html#property_referencesIndex">$referencesIndex</a>
+                        <span>
+                &nbsp;: array&lt;string|int, mixed&gt;            </span>
+                    </dt>
+                    <dd>Object reference index.</dd>
+
+                    <dt class="phpdocumentor-table-of-contents__entry -method -public">
+                        <a href="classes/App-DataFixtures-AbstractBaseFixture.html#method_load">load()</a>
+                        <span>
+                        &nbsp;: void    </span>
+                    </dt>
+                    <dd>Load.</dd>
+
+                    <dt class="phpdocumentor-table-of-contents__entry -method -public">
+                        <a href="classes/App-DataFixtures-CategoryFixtures.html#method_loadData">loadData()</a>
+                        <span>
+                        &nbsp;: void    </span>
+                    </dt>
+                    <dd>Load data.</dd>
+
+                    <dt class="phpdocumentor-table-of-contents__entry -method -protected">
+                        <a href="classes/App-DataFixtures-AbstractBaseFixture.html#method_createMany">createMany()</a>
+                        <span>
+                        &nbsp;: void    </span>
+                    </dt>
+                    <dd>Create many objects at once:.</dd>
+
+                    <dt class="phpdocumentor-table-of-contents__entry -method -protected">
+                        <a href="classes/App-DataFixtures-AbstractBaseFixture.html#method_getRandomReference">getRandomReference()</a>
+                        <span>
+                        &nbsp;: object    </span>
+                    </dt>
+                    <dd>Set random reference to the object.</dd>
+
+                    <dt class="phpdocumentor-table-of-contents__entry -method -protected">
+                        <a href="classes/App-DataFixtures-AbstractBaseFixture.html#method_getRandomReferences">getRandomReferences()</a>
+                        <span>
+                        &nbsp;: array&lt;string|int, mixed&gt;    </span>
+                    </dt>
+                    <dd>Get array of objects references based on count.</dd>
+
+                </dl>
+
+
+                <section class="phpdocumentor-properties">
+                    <h3 class="phpdocumentor-elements__header" id="properties">
+                        Properties
+                        <a class="headerlink" href="classes/App-DataFixtures-CategoryFixtures.html#properties"><i
+                                class="fas fa-link"></i></a>
+                    </h3>
+                    <article
+                            class="
+            phpdocumentor-element
+            -property
+            -protected
+                                                        "
+                    >
+                        <h4 class="phpdocumentor-element__name" id="property_faker">
+                            $faker
+                            <a class="headerlink"
+                               href="classes/App-DataFixtures-AbstractBaseFixture.html#property_faker"><i
+                                    class="fas fa-link"></i></a>
+                            <span class="phpdocumentor-element__modifiers">
+                                </span>
+                        </h4>
+                        <aside class="phpdocumentor-element-found-in">
+                            <abbr class="phpdocumentor-element-found-in__file"
+                                  title="src/DataFixtures/AbstractBaseFixture.php"><a
+                                    href="files/src-datafixtures-abstractbasefixture.html"><abbr
+                                    title="src/DataFixtures/AbstractBaseFixture.php">AbstractBaseFixture.php</abbr></a></abbr>
+                            :
+                            <span class="phpdocumentor-element-found-in__line">25</span>
+                        </aside>
+
+                        <p class="phpdocumentor-summary">Faker.</p>
+
+                        <code class="phpdocumentor-code phpdocumentor-signature ">
+                            <span class="phpdocumentor-signature__visibility">protected</span>
+                            <span class="phpdocumentor-signature__type"><abbr title="\Faker\Generator">Generator</abbr></span>
+                            <span class="phpdocumentor-signature__name">$faker</span>
+                        </code>
+
+                        <section class="phpdocumentor-description"></section>
+
+
+                    </article>
+                    <article
+                            class="
+            phpdocumentor-element
+            -property
+            -protected
+                                                        "
+                    >
+                        <h4 class="phpdocumentor-element__name" id="property_manager">
+                            $manager
+                            <a class="headerlink"
+                               href="classes/App-DataFixtures-AbstractBaseFixture.html#property_manager"><i
+                                    class="fas fa-link"></i></a>
+                            <span class="phpdocumentor-element__modifiers">
+                                </span>
+                        </h4>
+                        <aside class="phpdocumentor-element-found-in">
+                            <abbr class="phpdocumentor-element-found-in__file"
+                                  title="src/DataFixtures/AbstractBaseFixture.php"><a
+                                    href="files/src-datafixtures-abstractbasefixture.html"><abbr
+                                    title="src/DataFixtures/AbstractBaseFixture.php">AbstractBaseFixture.php</abbr></a></abbr>
+                            :
+                            <span class="phpdocumentor-element-found-in__line">32</span>
+                        </aside>
+
+                        <p class="phpdocumentor-summary">Persistence object manager.</p>
+
+                        <code class="phpdocumentor-code phpdocumentor-signature ">
+                            <span class="phpdocumentor-signature__visibility">protected</span>
+                            <span class="phpdocumentor-signature__type"><abbr
+                                    title="\Doctrine\Persistence\ObjectManager">ObjectManager</abbr></span>
+                            <span class="phpdocumentor-signature__name">$manager</span>
+                        </code>
+
+                        <section class="phpdocumentor-description"></section>
+
+
+                    </article>
+                    <article
+                            class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+                    >
+                        <h4 class="phpdocumentor-element__name" id="property_referencesIndex">
+                            $referencesIndex
+                            <a class="headerlink"
+                               href="classes/App-DataFixtures-AbstractBaseFixture.html#property_referencesIndex"><i
+                                    class="fas fa-link"></i></a>
+                            <span class="phpdocumentor-element__modifiers">
+                                </span>
+                        </h4>
+                        <aside class="phpdocumentor-element-found-in">
+                            <abbr class="phpdocumentor-element-found-in__file"
+                                  title="src/DataFixtures/AbstractBaseFixture.php"><a
+                                    href="files/src-datafixtures-abstractbasefixture.html"><abbr
+                                    title="src/DataFixtures/AbstractBaseFixture.php">AbstractBaseFixture.php</abbr></a></abbr>
+                            :
+                            <span class="phpdocumentor-element-found-in__line">39</span>
+                        </aside>
+
+                        <p class="phpdocumentor-summary">Object reference index.</p>
+
+                        <code class="phpdocumentor-code phpdocumentor-signature ">
+                            <span class="phpdocumentor-signature__visibility">private</span>
+                            <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
+                            <span class="phpdocumentor-signature__name">$referencesIndex</span>
+                            = <span class="phpdocumentor-signature__default-value">[]</span></code>
+
+                        <section class="phpdocumentor-description"></section>
+
+
+                    </article>
+                </section>
+
+                <section class="phpdocumentor-methods">
+                    <h3 class="phpdocumentor-elements__header" id="methods">
+                        Methods
+                        <a class="headerlink" href="classes/App-DataFixtures-CategoryFixtures.html#methods"><i
+                                class="fas fa-link"></i></a>
+                    </h3>
+                    <article
+                            class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+                    >
+                        <h4 class="phpdocumentor-element__name" id="method_load">
+                            load()
+                            <a class="headerlink"
+                               href="classes/App-DataFixtures-AbstractBaseFixture.html#method_load"><i
+                                    class="fas fa-link"></i></a>
+                        </h4>
+                        <aside class="phpdocumentor-element-found-in">
+                            <abbr class="phpdocumentor-element-found-in__file"
+                                  title="src/DataFixtures/AbstractBaseFixture.php"><a
+                                    href="files/src-datafixtures-abstractbasefixture.html"><abbr
+                                    title="src/DataFixtures/AbstractBaseFixture.php">AbstractBaseFixture.php</abbr></a></abbr>
+                            :
+                            <span class="phpdocumentor-element-found-in__line">46</span>
+                        </aside>
+
+                        <p class="phpdocumentor-summary">Load.</p>
+
+                        <code class="phpdocumentor-code phpdocumentor-signature ">
+                            <span class="phpdocumentor-signature__visibility">public</span>
+                            <span class="phpdocumentor-signature__name">load</span><span>(</span><span
+                                class="phpdocumentor-signature__argument"><span
+                                class="phpdocumentor-signature__argument__return-type"><abbr
+                                title="\Doctrine\Persistence\ObjectManager">ObjectManager</abbr>&nbsp;</span><span
+                                class="phpdocumentor-signature__argument__name">$manager</span></span><span>)</span><span> : </span><span
+                                class="phpdocumentor-signature__response_type">void</span></code>
+
+                        <section class="phpdocumentor-description"></section>
+
+                        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+                        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                                <span class="phpdocumentor-signature__argument__name">$manager</span>
+                                : <span class="phpdocumentor-signature__argument__return-type"><abbr
+                                    title="\Doctrine\Persistence\ObjectManager">ObjectManager</abbr></span>
+                            </dt>
+                            <dd class="phpdocumentor-argument-list__definition">
+                                <section class="phpdocumentor-description"><p>Persistence object manager</p>
+                                </section>
+
+                            </dd>
+                        </dl>
+
+
+                        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+                        <span class="phpdocumentor-signature__response_type">void</span>
+                        &mdash;
+                        <section class="phpdocumentor-description"></section>
+
+
+                    </article>
+                    <article
+                            class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+                    >
+                        <h4 class="phpdocumentor-element__name" id="method_loadData">
+                            loadData()
+                            <a class="headerlink" href="classes/App-DataFixtures-CategoryFixtures.html#method_loadData"><i
+                                    class="fas fa-link"></i></a>
+                        </h4>
+                        <aside class="phpdocumentor-element-found-in">
+                            <abbr class="phpdocumentor-element-found-in__file"
+                                  title="src/DataFixtures/CategoryFixtures.php"><a
+                                    href="files/src-datafixtures-categoryfixtures.html"><abbr
+                                    title="src/DataFixtures/CategoryFixtures.php">CategoryFixtures.php</abbr></a></abbr>
+                            :
+                            <span class="phpdocumentor-element-found-in__line">21</span>
+                        </aside>
+
+                        <p class="phpdocumentor-summary">Load data.</p>
+
+                        <code class="phpdocumentor-code phpdocumentor-signature ">
+                            <span class="phpdocumentor-signature__visibility">public</span>
+                            <span class="phpdocumentor-signature__name">loadData</span><span>(</span><span
+                                class="phpdocumentor-signature__argument"><span
+                                class="phpdocumentor-signature__argument__return-type"><abbr
+                                title="\Doctrine\Persistence\ObjectManager">ObjectManager</abbr>&nbsp;</span><span
+                                class="phpdocumentor-signature__argument__name">$manager</span></span><span>)</span><span> : </span><span
+                                class="phpdocumentor-signature__response_type">void</span></code>
+
+                        <section class="phpdocumentor-description"></section>
+
+                        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+                        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                                <span class="phpdocumentor-signature__argument__name">$manager</span>
+                                : <span class="phpdocumentor-signature__argument__return-type"><abbr
+                                    title="\Doctrine\Persistence\ObjectManager">ObjectManager</abbr></span>
+                            </dt>
+                            <dd class="phpdocumentor-argument-list__definition">
+                                <section class="phpdocumentor-description"><p>Object manager</p>
+                                </section>
+
+                            </dd>
+                        </dl>
+
+
+                        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+                        <span class="phpdocumentor-signature__response_type">void</span>
+                        &mdash;
+                        <section class="phpdocumentor-description"></section>
+
+
+                    </article>
+                    <article
+                            class="phpdocumentor-element
+            -method
+            -protected
+                                                        "
+                    >
+                        <h4 class="phpdocumentor-element__name" id="method_createMany">
+                            createMany()
+                            <a class="headerlink"
+                               href="classes/App-DataFixtures-AbstractBaseFixture.html#method_createMany"><i
+                                    class="fas fa-link"></i></a>
+                        </h4>
+                        <aside class="phpdocumentor-element-found-in">
+                            <abbr class="phpdocumentor-element-found-in__file"
+                                  title="src/DataFixtures/AbstractBaseFixture.php"><a
+                                    href="files/src-datafixtures-abstractbasefixture.html"><abbr
+                                    title="src/DataFixtures/AbstractBaseFixture.php">AbstractBaseFixture.php</abbr></a></abbr>
+                            :
+                            <span class="phpdocumentor-element-found-in__line">76</span>
+                        </aside>
+
+                        <p class="phpdocumentor-summary">Create many objects at once:.</p>
+
+                        <code class="phpdocumentor-code phpdocumentor-signature ">
+                            <span class="phpdocumentor-signature__visibility">protected</span>
+                            <span class="phpdocumentor-signature__name">createMany</span><span>(</span><span
+                                class="phpdocumentor-signature__argument"><span
+                                class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span
+                                class="phpdocumentor-signature__argument__name">$count</span></span><span
+                                class="phpdocumentor-signature__argument"><span>, </span><span
+                                class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span
+                                class="phpdocumentor-signature__argument__name">$className</span></span><span
+                                class="phpdocumentor-signature__argument"><span>, </span><span
+                                class="phpdocumentor-signature__argument__return-type">callable&nbsp;</span><span
+                                class="phpdocumentor-signature__argument__name">$factory</span></span><span>)</span><span> : </span><span
+                                class="phpdocumentor-signature__response_type">void</span></code>
+
+                        <section class="phpdocumentor-description"><p>$this-&gt;createMany(10, function(int $i) {
+                            $user = new User();
+                            $user-&gt;setFirstName('Ryan');</p>
+                            <pre class="prettyprint"><code class="prettyprint"> return $user;
+</code></pre>
+                            <p>});</p>
+                        </section>
+
+                        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+                        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                                <span class="phpdocumentor-signature__argument__name">$count</span>
+                                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+                            <dd class="phpdocumentor-argument-list__definition">
+                                <section class="phpdocumentor-description"><p>Number of object to create</p>
+                                </section>
+
+                            </dd>
+                            <dt class="phpdocumentor-argument-list__entry">
+                                <span class="phpdocumentor-signature__argument__name">$className</span>
+                                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+                            <dd class="phpdocumentor-argument-list__definition">
+                                <section class="phpdocumentor-description"><p>Tag these created objects with this group
+                                    name,
+                                    and use this later with getRandomReference(s)
+                                    to fetch only from this specific group</p>
+                                </section>
+
+                            </dd>
+                            <dt class="phpdocumentor-argument-list__entry">
+                                <span class="phpdocumentor-signature__argument__name">$factory</span>
+                                : <span class="phpdocumentor-signature__argument__return-type">callable</span>
+                            </dt>
+                            <dd class="phpdocumentor-argument-list__definition">
+                                <section class="phpdocumentor-description"><p>Defines method of creating objects</p>
+                                </section>
+
+                            </dd>
+                        </dl>
+
+
+                        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+                        <span class="phpdocumentor-signature__response_type">void</span>
+                        &mdash;
+                        <section class="phpdocumentor-description"></section>
+
+
+                    </article>
+                    <article
+                            class="phpdocumentor-element
+            -method
+            -protected
+                                                        "
+                    >
+                        <h4 class="phpdocumentor-element__name" id="method_getRandomReference">
+                            getRandomReference()
+                            <a class="headerlink"
+                               href="classes/App-DataFixtures-AbstractBaseFixture.html#method_getRandomReference"><i
+                                    class="fas fa-link"></i></a>
+                        </h4>
+                        <aside class="phpdocumentor-element-found-in">
+                            <abbr class="phpdocumentor-element-found-in__file"
+                                  title="src/DataFixtures/AbstractBaseFixture.php"><a
+                                    href="files/src-datafixtures-abstractbasefixture.html"><abbr
+                                    title="src/DataFixtures/AbstractBaseFixture.php">AbstractBaseFixture.php</abbr></a></abbr>
+                            :
+                            <span class="phpdocumentor-element-found-in__line">99</span>
+                        </aside>
+
+                        <p class="phpdocumentor-summary">Set random reference to the object.</p>
+
+                        <code class="phpdocumentor-code phpdocumentor-signature ">
+                            <span class="phpdocumentor-signature__visibility">protected</span>
+                            <span class="phpdocumentor-signature__name">getRandomReference</span><span>(</span><span
+                                class="phpdocumentor-signature__argument"><span
+                                class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span
+                                class="phpdocumentor-signature__argument__name">$className</span></span><span>)</span><span> : </span><span
+                                class="phpdocumentor-signature__response_type">object</span></code>
+
+                        <section class="phpdocumentor-description"></section>
+
+                        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+                        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                                <span class="phpdocumentor-signature__argument__name">$className</span>
+                                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+                            <dd class="phpdocumentor-argument-list__definition">
+                                <section class="phpdocumentor-description"><p>Objects class name</p>
+                                </section>
+
+                            </dd>
+                        </dl>
+
+
+                        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+                        <span class="phpdocumentor-signature__response_type">object</span>
+                        &mdash;
+                        <section class="phpdocumentor-description"><p>Random object reference</p>
+                        </section>
+
+
+                    </article>
+                    <article
+                            class="phpdocumentor-element
+            -method
+            -protected
+                                                        "
+                    >
+                        <h4 class="phpdocumentor-element__name" id="method_getRandomReferences">
+                            getRandomReferences()
+                            <a class="headerlink"
+                               href="classes/App-DataFixtures-AbstractBaseFixture.html#method_getRandomReferences"><i
+                                    class="fas fa-link"></i></a>
+                        </h4>
+                        <aside class="phpdocumentor-element-found-in">
+                            <abbr class="phpdocumentor-element-found-in__file"
+                                  title="src/DataFixtures/AbstractBaseFixture.php"><a
+                                    href="files/src-datafixtures-abstractbasefixture.html"><abbr
+                                    title="src/DataFixtures/AbstractBaseFixture.php">AbstractBaseFixture.php</abbr></a></abbr>
+                            :
+                            <span class="phpdocumentor-element-found-in__line">128</span>
+                        </aside>
+
+                        <p class="phpdocumentor-summary">Get array of objects references based on count.</p>
+
+                        <code class="phpdocumentor-code phpdocumentor-signature ">
+                            <span class="phpdocumentor-signature__visibility">protected</span>
+                            <span class="phpdocumentor-signature__name">getRandomReferences</span><span>(</span><span
+                                class="phpdocumentor-signature__argument"><span
+                                class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span
+                                class="phpdocumentor-signature__argument__name">$className</span></span><span
+                                class="phpdocumentor-signature__argument"><span>, </span><span
+                                class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span
+                                class="phpdocumentor-signature__argument__name">$count</span></span><span>)</span><span> : </span><span
+                                class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+
+                        <section class="phpdocumentor-description"></section>
+
+                        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+                        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                                <span class="phpdocumentor-signature__argument__name">$className</span>
+                                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+                            <dd class="phpdocumentor-argument-list__definition">
+                                <section class="phpdocumentor-description"><p>Class name</p>
+                                </section>
+
+                            </dd>
+                            <dt class="phpdocumentor-argument-list__entry">
+                                <span class="phpdocumentor-signature__argument__name">$count</span>
+                                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+                            <dd class="phpdocumentor-argument-list__definition">
+                                <section class="phpdocumentor-description"><p>Number of references</p>
+                                </section>
+
+                            </dd>
+                        </dl>
+
+
+                        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+                        <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+                        &mdash;
+                        <section class="phpdocumentor-description"><p>Result</p>
+                        </section>
+
+
+                    </article>
+                </section>
+
+            </article>
+            <section class="phpdocumentor-search-results phpdocumentor-search-results--hidden" data-search-results>
+                <section class="phpdocumentor-search-results__dialog">
+                    <header class="phpdocumentor-search-results__header">
+                        <h2 class="phpdocumentor-search-results__title">Search results</h2>
+                        <button class="phpdocumentor-search-results__close"><i class="fas fa-times"></i></button>
+                    </header>
+                    <section class="phpdocumentor-search-results__body">
+                        <ul class="phpdocumentor-search-results__entries"></ul>
+                    </section>
+                </section>
+            </section>
+        </div>
+    </div>
+    <a class="phpdocumentor-back-to-top" href="classes/App-DataFixtures-CategoryFixtures.html#top"><i
+            class="fas fa-chevron-circle-up"></i></a>
+
+</main>
+
+<script>
+    cssVars({});
+</script>
+</body>
+</html>

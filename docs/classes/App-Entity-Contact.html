@@ -1,0 +1,1819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Documentation</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <base href="../">
+    <link href="images/favicon.ico" rel="icon"/>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/base.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap"
+          rel="stylesheet">
+    <link href="css/template.css" rel="stylesheet">
+    <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css"
+          integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@3.4.6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script crossorigin="anonymous" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk="
+            src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js"></script>
+    <script src="js/search.js"></script>
+    <script defer src="js/searchIndex.js"></script>
+</head>
+<body id="top">
+<header class="phpdocumentor-header phpdocumentor-section">
+    <h1 class="phpdocumentor-title"><a class="phpdocumentor-title__link" href="">Documentation</a></h1>
+    <input class="phpdocumentor-header__menu-button" id="menu-button" name="menu-button" type="checkbox"/>
+    <label class="phpdocumentor-header__menu-icon" for="menu-button">
+        <i class="fas fa-bars"></i>
+    </label>
+    <section class="phpdocumentor-search" data-search-form>
+        <label>
+            <span class="visually-hidden">Search for</span>
+            <svg class="phpdocumentor-search__icon" fill="none" height="20" viewBox="0 0 21 20" width="21"
+                 xmlns="http://www.w3.org/2000/svg">
+                <circle cx="7.5" cy="7.5" r="6.5" stroke="currentColor" stroke-width="2"/>
+                <line stroke="currentColor" stroke-width="3" x1="12.4892" x2="19.1559" y1="12.2727" y2="18.9393"/>
+            </svg>
+            <input class="phpdocumentor-field phpdocumentor-search__field" disabled placeholder="Loading .."
+                   type="search"/>
+        </label>
+    </section>
+
+    <nav class="phpdocumentor-topnav">
+        <ul class="phpdocumentor-topnav__menu">
+        </ul>
+    </nav>
+</header>
+
+<main class="phpdocumentor">
+    <div class="phpdocumentor-section">
+        <input class="phpdocumentor-sidebar__menu-button" id="sidebar-button" name="sidebar-button" type="checkbox"/>
+        <label class="phpdocumentor-sidebar__menu-icon" for="sidebar-button">
+            Menu
+        </label>
+        <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+
+            <section class="phpdocumentor-sidebar__category">
+                <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/app.html"><abbr
+                        title="\App">App</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                    <li><a href="namespaces/app-controller.html"><abbr title="\App\Controller">Controller</abbr></a>
+                    </li>
+                    <li><a href="namespaces/app-datafixtures.html"><abbr
+                            title="\App\DataFixtures">DataFixtures</abbr></a></li>
+                    <li><a href="namespaces/app-entity.html"><abbr title="\App\Entity">Entity</abbr></a></li>
+                    <li><a href="namespaces/app-eventsubscriber.html"><abbr
+                            title="\App\EventSubscriber">EventSubscriber</abbr></a></li>
+                    <li><a href="namespaces/app-form.html"><abbr title="\App\Form">Form</abbr></a></li>
+                    <li><a href="namespaces/app-repository.html"><abbr title="\App\Repository">Repository</abbr></a>
+                    </li>
+                    <li><a href="namespaces/app-security.html"><abbr title="\App\Security">Security</abbr></a></li>
+                    <li><a href="namespaces/app-service.html"><abbr title="\App\Service">Service</abbr></a></li>
+                </ul>
+            </section>
+
+
+            <section class="phpdocumentor-sidebar__category">
+                <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="reports/deprecated.html">Deprecated</a></h3>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="reports/errors.html">Errors</a></h3>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="reports/markers.html">Markers</a></h3>
+            </section>
+
+            <section class="phpdocumentor-sidebar__category">
+                <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="indices/files.html">Files</a></h3>
+            </section>
+        </aside>
+
+        <div class="phpdocumentor-column -eight phpdocumentor-content">
+            <ul class="phpdocumentor-breadcrumbs">
+                <li class="phpdocumentor-breadcrumb"><a href="namespaces/app.html">App</a></li>
+                <li class="phpdocumentor-breadcrumb"><a href="namespaces/app-entity.html">Entity</a></li>
+            </ul>
+
+            <article class="phpdocumentor-element -class">
+                <h2 class="phpdocumentor-content__title">
+                    Contact
+
+
+                </h2>
+
+                <aside class="phpdocumentor-element-found-in">
+                    <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Contact.php"><a
+                            href="files/src-entity-contact.html"><abbr title="src/Entity/Contact.php">Contact.php</abbr></a></abbr>
+                    :
+                    <span class="phpdocumentor-element-found-in__line">21</span>
+                </aside>
+
+
+                <section class="phpdocumentor-description"></section>
+
+
+                <h5 class="phpdocumentor-tag-list__heading" id="tags">
+                    Tags
+                    <a class="headerlink" href="#tags"><i class="fas fa-link"></i></a>
+                </h5>
+                <dl class="phpdocumentor-tag-list">
+                    <dt class="phpdocumentor-tag-list__entry">
+                        <span class="phpdocumentor-tag__name">ORM\Entity</span>
+                    </dt>
+                    <dd class="phpdocumentor-tag-list__definition">
+
+                        <section class="phpdocumentor-description"><p>(repositoryClass=ContactRepository::class)</p>
+                        </section>
+
+                    </dd>
+                    <dt class="phpdocumentor-tag-list__entry">
+                        <span class="phpdocumentor-tag__name">ORM\Table</span>
+                    </dt>
+                    <dd class="phpdocumentor-tag-list__definition">
+
+                        <section class="phpdocumentor-description"><p>(name=&quot;contacts&quot;)</p>
+                        </section>
+
+                    </dd>
+                </dl>
+
+
+                <h3 id="toc">
+                    Table of Contents
+                    <a class="headerlink" href="#toc"><i class="fas fa-link"></i></a>
+                </h3>
+
+                <dl class="phpdocumentor-table-of-contents">
+                    <dt class="phpdocumentor-table-of-contents__entry -property -private">
+                        <a href="classes/App-Entity-Contact.html#property_address">$address</a>
+                        <span>
+                &nbsp;: string            </span>
+                    </dt>
+                    <dd>Address.</dd>
+
+                    <dt class="phpdocumentor-table-of-contents__entry -property -private">
+                        <a href="classes/App-Entity-Contact.html#property_createdAt">$createdAt</a>
+                        <span>
+                &nbsp;: <abbr title="\DateTimeInterface">DateTimeInterface</abbr>            </span>
+                    </dt>
+                    <dd>Created at datetime.</dd>
+
+                    <dt class="phpdocumentor-table-of-contents__entry -property -private">
+                        <a href="classes/App-Entity-Contact.html#property_events">$events</a>
+                        <span>
+                &nbsp;: <abbr title="\Doctrine\Common\Collections\Collection">Collection</abbr>            </span>
+                    </dt>
+                    <dd>Events.</dd>
+
+                    <dt class="phpdocumentor-table-of-contents__entry -property -private">
+                        <a href="classes/App-Entity-Contact.html#property_firstName">$firstName</a>
+                        <span>
+                &nbsp;: string            </span>
+                    </dt>
+                    <dd>First name.</dd>
+
+                    <dt class="phpdocumentor-table-of-contents__entry -property -private">
+                        <a href="classes/App-Entity-Contact.html#property_id">$id</a>
+                        <span>
+                &nbsp;: int            </span>
+                    </dt>
+                    <dd>Primary key.</dd>
+
+                    <dt class="phpdocumentor-table-of-contents__entry -property -private">
+                        <a href="classes/App-Entity-Contact.html#property_lastName">$lastName</a>
+                        <span>
+                &nbsp;: string            </span>
+                    </dt>
+                    <dd>Last name.</dd>
+
+                    <dt class="phpdocumentor-table-of-contents__entry -property -private">
+                        <a href="classes/App-Entity-Contact.html#property_phone">$phone</a>
+                        <span>
+                &nbsp;: string            </span>
+                    </dt>
+                    <dd>Phone.</dd>
+
+                    <dt class="phpdocumentor-table-of-contents__entry -property -private">
+                        <a href="classes/App-Entity-Contact.html#property_updatedAt">$updatedAt</a>
+                        <span>
+                &nbsp;: <abbr title="\DateTimeInterface">DateTimeInterface</abbr>            </span>
+                    </dt>
+                    <dd>Updated at datetime.</dd>
+
+                    <dt class="phpdocumentor-table-of-contents__entry -property -private">
+                        <a href="classes/App-Entity-Contact.html#property_user">$user</a>
+                        <span>
+                &nbsp;: <a href="classes/App-Entity-User.html"><abbr title="\App\Entity\User">User</abbr></a>            </span>
+                    </dt>
+                    <dd>Users.</dd>
+
+                    <dt class="phpdocumentor-table-of-contents__entry -method -public">
+                        <a href="classes/App-Entity-Contact.html#method___construct">__construct()</a>
+                        <span>
+                        &nbsp;: mixed    </span>
+                    </dt>
+                    <dd>Contact constructor.</dd>
+
+                    <dt class="phpdocumentor-table-of-contents__entry -method -public">
+                        <a href="classes/App-Entity-Contact.html#method_addEvent">addEvent()</a>
+                        <span>
+                        &nbsp;: $this    </span>
+                    </dt>
+                    <dd>Add event.</dd>
+
+                    <dt class="phpdocumentor-table-of-contents__entry -method -public">
+                        <a href="classes/App-Entity-Contact.html#method_getAddress">getAddress()</a>
+                        <span>
+                        &nbsp;: string|null    </span>
+                    </dt>
+                    <dd>Getter for address.</dd>
+
+                    <dt class="phpdocumentor-table-of-contents__entry -method -public">
+                        <a href="classes/App-Entity-Contact.html#method_getCreatedAt">getCreatedAt()</a>
+                        <span>
+                        &nbsp;: <abbr title="\DateTimeInterface">DateTimeInterface</abbr>|null    </span>
+                    </dt>
+                    <dd>Getter for created at.</dd>
+
+                    <dt class="phpdocumentor-table-of-contents__entry -method -public">
+                        <a href="classes/App-Entity-Contact.html#method_getEvents">getEvents()</a>
+                        <span>
+                        &nbsp;: <abbr title="\Doctrine\Common\Collections\Collection">Collection</abbr>|array&lt;string|int, <a
+                                href="classes/App-Entity-Event.html"><abbr title="\App\Entity\Event">Event</abbr></a>&gt;    </span>
+                    </dt>
+                    <dd>Getter events.</dd>
+
+                    <dt class="phpdocumentor-table-of-contents__entry -method -public">
+                        <a href="classes/App-Entity-Contact.html#method_getFirstName">getFirstName()</a>
+                        <span>
+                        &nbsp;: string|null    </span>
+                    </dt>
+                    <dd>Getter for first name.</dd>
+
+                    <dt class="phpdocumentor-table-of-contents__entry -method -public">
+                        <a href="classes/App-Entity-Contact.html#method_getId">getId()</a>
+                        <span>
+                        &nbsp;: int|null    </span>
+                    </dt>
+                    <dd>Getter for id.</dd>
+
+                    <dt class="phpdocumentor-table-of-contents__entry -method -public">
+                        <a href="classes/App-Entity-Contact.html#method_getLastName">getLastName()</a>
+                        <span>
+                        &nbsp;: string|null    </span>
+                    </dt>
+                    <dd>Getter for last name.</dd>
+
+                    <dt class="phpdocumentor-table-of-contents__entry -method -public">
+                        <a href="classes/App-Entity-Contact.html#method_getPhone">getPhone()</a>
+                        <span>
+                        &nbsp;: string|null    </span>
+                    </dt>
+                    <dd>Getter for Phone.</dd>
+
+                    <dt class="phpdocumentor-table-of-contents__entry -method -public">
+                        <a href="classes/App-Entity-Contact.html#method_getUpdatedAt">getUpdatedAt()</a>
+                        <span>
+                        &nbsp;: <abbr title="\DateTimeInterface">DateTimeInterface</abbr>|null    </span>
+                    </dt>
+                    <dd>Getter for updated at.</dd>
+
+                    <dt class="phpdocumentor-table-of-contents__entry -method -public">
+                        <a href="classes/App-Entity-Contact.html#method_getUser">getUser()</a>
+                        <span>
+                        &nbsp;: <a href="classes/App-Entity-User.html"><abbr title="\App\Entity\User">User</abbr></a>|null    </span>
+                    </dt>
+                    <dd>Getter for user.</dd>
+
+                    <dt class="phpdocumentor-table-of-contents__entry -method -public">
+                        <a href="classes/App-Entity-Contact.html#method_removeEvent">removeEvent()</a>
+                        <span>
+                        &nbsp;: $this    </span>
+                    </dt>
+                    <dd>Remove event.</dd>
+
+                    <dt class="phpdocumentor-table-of-contents__entry -method -public">
+                        <a href="classes/App-Entity-Contact.html#method_setAddress">setAddress()</a>
+                        <span>
+                        &nbsp;: $this    </span>
+                    </dt>
+                    <dd>Setter for Address.</dd>
+
+                    <dt class="phpdocumentor-table-of-contents__entry -method -public">
+                        <a href="classes/App-Entity-Contact.html#method_setCreatedAt">setCreatedAt()</a>
+                        <span>
+                        &nbsp;: $this    </span>
+                    </dt>
+                    <dd>Setter for created at.</dd>
+
+                    <dt class="phpdocumentor-table-of-contents__entry -method -public">
+                        <a href="classes/App-Entity-Contact.html#method_setFirstName">setFirstName()</a>
+                        <span>
+                        &nbsp;: $this    </span>
+                    </dt>
+                    <dd>Setter for first name.</dd>
+
+                    <dt class="phpdocumentor-table-of-contents__entry -method -public">
+                        <a href="classes/App-Entity-Contact.html#method_setLastName">setLastName()</a>
+                        <span>
+                        &nbsp;: $this    </span>
+                    </dt>
+                    <dd>Setter for last name.</dd>
+
+                    <dt class="phpdocumentor-table-of-contents__entry -method -public">
+                        <a href="classes/App-Entity-Contact.html#method_setPhone">setPhone()</a>
+                        <span>
+                        &nbsp;: <a href="classes/App-Entity-Contact.html"><abbr
+                                title="\App\Entity\Contact">Contact</abbr></a>    </span>
+                    </dt>
+                    <dd>Setter for Phone.</dd>
+
+                    <dt class="phpdocumentor-table-of-contents__entry -method -public">
+                        <a href="classes/App-Entity-Contact.html#method_setUpdatedAt">setUpdatedAt()</a>
+                        <span>
+                        &nbsp;: $this    </span>
+                    </dt>
+                    <dd>Setter for updated at.</dd>
+
+                    <dt class="phpdocumentor-table-of-contents__entry -method -public">
+                        <a href="classes/App-Entity-Contact.html#method_setUser">setUser()</a>
+                        <span>
+                        &nbsp;: $this    </span>
+                    </dt>
+                    <dd>Setter for user.</dd>
+
+                </dl>
+
+
+                <section class="phpdocumentor-properties">
+                    <h3 class="phpdocumentor-elements__header" id="properties">
+                        Properties
+                        <a class="headerlink" href="classes/App-Entity-Contact.html#properties"><i
+                                class="fas fa-link"></i></a>
+                    </h3>
+                    <article
+                            class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+                    >
+                        <h4 class="phpdocumentor-element__name" id="property_address">
+                            $address
+                            <a class="headerlink" href="classes/App-Entity-Contact.html#property_address"><i
+                                    class="fas fa-link"></i></a>
+                            <span class="phpdocumentor-element__modifiers">
+                                </span>
+                        </h4>
+                        <aside class="phpdocumentor-element-found-in">
+                            <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Contact.php"><a
+                                    href="files/src-entity-contact.html"><abbr title="src/Entity/Contact.php">Contact.php</abbr></a></abbr>
+                            :
+                            <span class="phpdocumentor-element-found-in__line">74</span>
+                        </aside>
+
+                        <p class="phpdocumentor-summary">Address.</p>
+
+                        <code class="phpdocumentor-code phpdocumentor-signature ">
+                            <span class="phpdocumentor-signature__visibility">private</span>
+                            <span class="phpdocumentor-signature__type">string</span>
+                            <span class="phpdocumentor-signature__name">$address</span>
+                        </code>
+
+                        <section class="phpdocumentor-description"></section>
+
+
+                        <h5 class="phpdocumentor-tag-list__heading" id="tags">
+                            Tags
+                            <a class="headerlink" href="#tags"><i class="fas fa-link"></i></a>
+                        </h5>
+                        <dl class="phpdocumentor-tag-list">
+                            <dt class="phpdocumentor-tag-list__entry">
+                                <span class="phpdocumentor-tag__name">ORM\Column</span>
+                            </dt>
+                            <dd class="phpdocumentor-tag-list__definition">
+
+                                <section class="phpdocumentor-description"><p>(type=&quot;string&quot;, length=255,
+                                    nullable=true)</p>
+                                </section>
+
+                            </dd>
+                            <dt class="phpdocumentor-tag-list__entry">
+                                <span class="phpdocumentor-tag__name">Assert\Type</span>
+                            </dt>
+                            <dd class="phpdocumentor-tag-list__definition">
+
+                                <section class="phpdocumentor-description"><p>(type=&quot;string&quot;)</p>
+                                </section>
+
+                            </dd>
+                            <dt class="phpdocumentor-tag-list__entry">
+                                <span class="phpdocumentor-tag__name">Assert\Length</span>
+                            </dt>
+                            <dd class="phpdocumentor-tag-list__definition">
+
+                                <section class="phpdocumentor-description"><p>(
+                                    min=&quot;3&quot;
+                                    )</p>
+                                </section>
+
+                            </dd>
+                        </dl>
+
+                    </article>
+                    <article
+                            class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+                    >
+                        <h4 class="phpdocumentor-element__name" id="property_createdAt">
+                            $createdAt
+                            <a class="headerlink" href="classes/App-Entity-Contact.html#property_createdAt"><i
+                                    class="fas fa-link"></i></a>
+                            <span class="phpdocumentor-element__modifiers">
+                                </span>
+                        </h4>
+                        <aside class="phpdocumentor-element-found-in">
+                            <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Contact.php"><a
+                                    href="files/src-entity-contact.html"><abbr title="src/Entity/Contact.php">Contact.php</abbr></a></abbr>
+                            :
+                            <span class="phpdocumentor-element-found-in__line">105</span>
+                        </aside>
+
+                        <p class="phpdocumentor-summary">Created at datetime.</p>
+
+                        <code class="phpdocumentor-code phpdocumentor-signature ">
+                            <span class="phpdocumentor-signature__visibility">private</span>
+                            <span class="phpdocumentor-signature__type"><abbr title="\DateTimeInterface">DateTimeInterface</abbr></span>
+                            <span class="phpdocumentor-signature__name">$createdAt</span>
+                        </code>
+
+                        <section class="phpdocumentor-description"></section>
+
+
+                        <h5 class="phpdocumentor-tag-list__heading" id="tags">
+                            Tags
+                            <a class="headerlink" href="#tags"><i class="fas fa-link"></i></a>
+                        </h5>
+                        <dl class="phpdocumentor-tag-list">
+                            <dt class="phpdocumentor-tag-list__entry">
+                                <span class="phpdocumentor-tag__name">ORM\Column</span>
+                            </dt>
+                            <dd class="phpdocumentor-tag-list__definition">
+
+                                <section class="phpdocumentor-description"><p>(type=&quot;datetime&quot;)</p>
+                                </section>
+
+                            </dd>
+                            <dt class="phpdocumentor-tag-list__entry">
+                                <span class="phpdocumentor-tag__name">Gedmo\Timestampable</span>
+                            </dt>
+                            <dd class="phpdocumentor-tag-list__definition">
+
+                                <section class="phpdocumentor-description"><p>(on=&quot;create&quot;)</p>
+                                </section>
+
+                            </dd>
+                        </dl>
+
+                    </article>
+                    <article
+                            class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+                    >
+                        <h4 class="phpdocumentor-element__name" id="property_events">
+                            $events
+                            <a class="headerlink" href="classes/App-Entity-Contact.html#property_events"><i
+                                    class="fas fa-link"></i></a>
+                            <span class="phpdocumentor-element__modifiers">
+                                </span>
+                        </h4>
+                        <aside class="phpdocumentor-element-found-in">
+                            <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Contact.php"><a
+                                    href="files/src-entity-contact.html"><abbr title="src/Entity/Contact.php">Contact.php</abbr></a></abbr>
+                            :
+                            <span class="phpdocumentor-element-found-in__line">121</span>
+                        </aside>
+
+                        <p class="phpdocumentor-summary">Events.</p>
+
+                        <code class="phpdocumentor-code phpdocumentor-signature ">
+                            <span class="phpdocumentor-signature__visibility">private</span>
+                            <span class="phpdocumentor-signature__type"><abbr
+                                    title="\Doctrine\Common\Collections\Collection">Collection</abbr></span>
+                            <span class="phpdocumentor-signature__name">$events</span>
+                        </code>
+
+                        <section class="phpdocumentor-description"></section>
+
+
+                        <h5 class="phpdocumentor-tag-list__heading" id="tags">
+                            Tags
+                            <a class="headerlink" href="#tags"><i class="fas fa-link"></i></a>
+                        </h5>
+                        <dl class="phpdocumentor-tag-list">
+                            <dt class="phpdocumentor-tag-list__entry">
+                                <span class="phpdocumentor-tag__name">ORM\ManyToMany</span>
+                            </dt>
+                            <dd class="phpdocumentor-tag-list__definition">
+
+                                <section class="phpdocumentor-description"><p>(targetEntity=Event::class, mappedBy=&quot;contact&quot;)</p>
+                                </section>
+
+                            </dd>
+                        </dl>
+
+                    </article>
+                    <article
+                            class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+                    >
+                        <h4 class="phpdocumentor-element__name" id="property_firstName">
+                            $firstName
+                            <a class="headerlink" href="classes/App-Entity-Contact.html#property_firstName"><i
+                                    class="fas fa-link"></i></a>
+                            <span class="phpdocumentor-element__modifiers">
+                                </span>
+                        </h4>
+                        <aside class="phpdocumentor-element-found-in">
+                            <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Contact.php"><a
+                                    href="files/src-entity-contact.html"><abbr title="src/Entity/Contact.php">Contact.php</abbr></a></abbr>
+                            :
+                            <span class="phpdocumentor-element-found-in__line">47</span>
+                        </aside>
+
+                        <p class="phpdocumentor-summary">First name.</p>
+
+                        <code class="phpdocumentor-code phpdocumentor-signature ">
+                            <span class="phpdocumentor-signature__visibility">private</span>
+                            <span class="phpdocumentor-signature__type">string</span>
+                            <span class="phpdocumentor-signature__name">$firstName</span>
+                        </code>
+
+                        <section class="phpdocumentor-description"></section>
+
+
+                        <h5 class="phpdocumentor-tag-list__heading" id="tags">
+                            Tags
+                            <a class="headerlink" href="#tags"><i class="fas fa-link"></i></a>
+                        </h5>
+                        <dl class="phpdocumentor-tag-list">
+                            <dt class="phpdocumentor-tag-list__entry">
+                                <span class="phpdocumentor-tag__name">ORM\Column</span>
+                            </dt>
+                            <dd class="phpdocumentor-tag-list__definition">
+
+                                <section class="phpdocumentor-description"><p>(type=&quot;string&quot;, length=50)</p>
+                                </section>
+
+                            </dd>
+                            <dt class="phpdocumentor-tag-list__entry">
+                                <span class="phpdocumentor-tag__name">Assert\Type</span>
+                            </dt>
+                            <dd class="phpdocumentor-tag-list__definition">
+
+                                <section class="phpdocumentor-description"><p>(type=&quot;string&quot;)</p>
+                                </section>
+
+                            </dd>
+                            <dt class="phpdocumentor-tag-list__entry">
+                                <span class="phpdocumentor-tag__name">Assert\NotBlank</span>
+                            </dt>
+                            <dd class="phpdocumentor-tag-list__definition">
+
+                                <section class="phpdocumentor-description"></section>
+
+                            </dd>
+                            <dt class="phpdocumentor-tag-list__entry">
+                                <span class="phpdocumentor-tag__name">Assert\Length</span>
+                            </dt>
+                            <dd class="phpdocumentor-tag-list__definition">
+
+                                <section class="phpdocumentor-description"><p>(
+                                    min=&quot;2&quot;,
+                                    max=&quot;50&quot;
+                                    )</p>
+                                </section>
+
+                            </dd>
+                            <dt class="phpdocumentor-tag-list__entry">
+                                <span class="phpdocumentor-tag__name">Assert\Regex</span>
+                            </dt>
+                            <dd class="phpdocumentor-tag-list__definition">
+
+                                <section class="phpdocumentor-description"><p>(&quot;/^[a-zA-Z\p{L}]+$/u&quot;)</p>
+                                </section>
+
+                            </dd>
+                        </dl>
+
+                    </article>
+                    <article
+                            class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+                    >
+                        <h4 class="phpdocumentor-element__name" id="property_id">
+                            $id
+                            <a class="headerlink" href="classes/App-Entity-Contact.html#property_id"><i
+                                    class="fas fa-link"></i></a>
+                            <span class="phpdocumentor-element__modifiers">
+                                </span>
+                        </h4>
+                        <aside class="phpdocumentor-element-found-in">
+                            <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Contact.php"><a
+                                    href="files/src-entity-contact.html"><abbr title="src/Entity/Contact.php">Contact.php</abbr></a></abbr>
+                            :
+                            <span class="phpdocumentor-element-found-in__line">32</span>
+                        </aside>
+
+                        <p class="phpdocumentor-summary">Primary key.</p>
+
+                        <code class="phpdocumentor-code phpdocumentor-signature ">
+                            <span class="phpdocumentor-signature__visibility">private</span>
+                            <span class="phpdocumentor-signature__type">int</span>
+                            <span class="phpdocumentor-signature__name">$id</span>
+                        </code>
+
+                        <section class="phpdocumentor-description"></section>
+
+
+                        <h5 class="phpdocumentor-tag-list__heading" id="tags">
+                            Tags
+                            <a class="headerlink" href="#tags"><i class="fas fa-link"></i></a>
+                        </h5>
+                        <dl class="phpdocumentor-tag-list">
+                            <dt class="phpdocumentor-tag-list__entry">
+                                <span class="phpdocumentor-tag__name">ORM\Id</span>
+                            </dt>
+                            <dd class="phpdocumentor-tag-list__definition">
+
+                                <section class="phpdocumentor-description"></section>
+
+                            </dd>
+                            <dt class="phpdocumentor-tag-list__entry">
+                                <span class="phpdocumentor-tag__name">ORM\GeneratedValue</span>
+                            </dt>
+                            <dd class="phpdocumentor-tag-list__definition">
+
+                                <section class="phpdocumentor-description"></section>
+
+                            </dd>
+                            <dt class="phpdocumentor-tag-list__entry">
+                                <span class="phpdocumentor-tag__name">ORM\Column</span>
+                            </dt>
+                            <dd class="phpdocumentor-tag-list__definition">
+
+                                <section class="phpdocumentor-description"><p>(type=&quot;integer&quot;, name=&quot;id&quot;)</p>
+                                </section>
+
+                            </dd>
+                        </dl>
+
+                    </article>
+                    <article
+                            class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+                    >
+                        <h4 class="phpdocumentor-element__name" id="property_lastName">
+                            $lastName
+                            <a class="headerlink" href="classes/App-Entity-Contact.html#property_lastName"><i
+                                    class="fas fa-link"></i></a>
+                            <span class="phpdocumentor-element__modifiers">
+                                </span>
+                        </h4>
+                        <aside class="phpdocumentor-element-found-in">
+                            <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Contact.php"><a
+                                    href="files/src-entity-contact.html"><abbr title="src/Entity/Contact.php">Contact.php</abbr></a></abbr>
+                            :
+                            <span class="phpdocumentor-element-found-in__line">62</span>
+                        </aside>
+
+                        <p class="phpdocumentor-summary">Last name.</p>
+
+                        <code class="phpdocumentor-code phpdocumentor-signature ">
+                            <span class="phpdocumentor-signature__visibility">private</span>
+                            <span class="phpdocumentor-signature__type">string</span>
+                            <span class="phpdocumentor-signature__name">$lastName</span>
+                        </code>
+
+                        <section class="phpdocumentor-description"></section>
+
+
+                        <h5 class="phpdocumentor-tag-list__heading" id="tags">
+                            Tags
+                            <a class="headerlink" href="#tags"><i class="fas fa-link"></i></a>
+                        </h5>
+                        <dl class="phpdocumentor-tag-list">
+                            <dt class="phpdocumentor-tag-list__entry">
+                                <span class="phpdocumentor-tag__name">ORM\Column</span>
+                            </dt>
+                            <dd class="phpdocumentor-tag-list__definition">
+
+                                <section class="phpdocumentor-description"><p>(type=&quot;string&quot;, length=50)</p>
+                                </section>
+
+                            </dd>
+                            <dt class="phpdocumentor-tag-list__entry">
+                                <span class="phpdocumentor-tag__name">Assert\Type</span>
+                            </dt>
+                            <dd class="phpdocumentor-tag-list__definition">
+
+                                <section class="phpdocumentor-description"><p>(type=&quot;string&quot;)</p>
+                                </section>
+
+                            </dd>
+                            <dt class="phpdocumentor-tag-list__entry">
+                                <span class="phpdocumentor-tag__name">Assert\NotBlank</span>
+                            </dt>
+                            <dd class="phpdocumentor-tag-list__definition">
+
+                                <section class="phpdocumentor-description"></section>
+
+                            </dd>
+                            <dt class="phpdocumentor-tag-list__entry">
+                                <span class="phpdocumentor-tag__name">Assert\Length</span>
+                            </dt>
+                            <dd class="phpdocumentor-tag-list__definition">
+
+                                <section class="phpdocumentor-description"><p>(
+                                    min=&quot;2&quot;,
+                                    max=&quot;50&quot;
+                                    )</p>
+                                </section>
+
+                            </dd>
+                            <dt class="phpdocumentor-tag-list__entry">
+                                <span class="phpdocumentor-tag__name">Assert\Regex</span>
+                            </dt>
+                            <dd class="phpdocumentor-tag-list__definition">
+
+                                <section class="phpdocumentor-description"><p>(&quot;/^[a-zA-Z\p{L}]+$/u&quot;)</p>
+                                </section>
+
+                            </dd>
+                        </dl>
+
+                    </article>
+                    <article
+                            class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+                    >
+                        <h4 class="phpdocumentor-element__name" id="property_phone">
+                            $phone
+                            <a class="headerlink" href="classes/App-Entity-Contact.html#property_phone"><i
+                                    class="fas fa-link"></i></a>
+                            <span class="phpdocumentor-element__modifiers">
+                                </span>
+                        </h4>
+                        <aside class="phpdocumentor-element-found-in">
+                            <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Contact.php"><a
+                                    href="files/src-entity-contact.html"><abbr title="src/Entity/Contact.php">Contact.php</abbr></a></abbr>
+                            :
+                            <span class="phpdocumentor-element-found-in__line">86</span>
+                        </aside>
+
+                        <p class="phpdocumentor-summary">Phone.</p>
+
+                        <code class="phpdocumentor-code phpdocumentor-signature ">
+                            <span class="phpdocumentor-signature__visibility">private</span>
+                            <span class="phpdocumentor-signature__type">string</span>
+                            <span class="phpdocumentor-signature__name">$phone</span>
+                        </code>
+
+                        <section class="phpdocumentor-description"></section>
+
+
+                        <h5 class="phpdocumentor-tag-list__heading" id="tags">
+                            Tags
+                            <a class="headerlink" href="#tags"><i class="fas fa-link"></i></a>
+                        </h5>
+                        <dl class="phpdocumentor-tag-list">
+                            <dt class="phpdocumentor-tag-list__entry">
+                                <span class="phpdocumentor-tag__name">ORM\Column</span>
+                            </dt>
+                            <dd class="phpdocumentor-tag-list__definition">
+
+                                <section class="phpdocumentor-description"><p>(type=&quot;string&quot;, length=32,
+                                    nullable=true)</p>
+                                </section>
+
+                            </dd>
+                            <dt class="phpdocumentor-tag-list__entry">
+                                <span class="phpdocumentor-tag__name">Assert\Type</span>
+                            </dt>
+                            <dd class="phpdocumentor-tag-list__definition">
+
+                                <section class="phpdocumentor-description"><p>(type=&quot;string&quot;)</p>
+                                </section>
+
+                            </dd>
+                            <dt class="phpdocumentor-tag-list__entry">
+                                <span class="phpdocumentor-tag__name">Assert\Length</span>
+                            </dt>
+                            <dd class="phpdocumentor-tag-list__definition">
+
+                                <section class="phpdocumentor-description"><p>(
+                                    min=&quot;3&quot;
+                                    )</p>
+                                </section>
+
+                            </dd>
+                        </dl>
+
+                    </article>
+                    <article
+                            class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+                    >
+                        <h4 class="phpdocumentor-element__name" id="property_updatedAt">
+                            $updatedAt
+                            <a class="headerlink" href="classes/App-Entity-Contact.html#property_updatedAt"><i
+                                    class="fas fa-link"></i></a>
+                            <span class="phpdocumentor-element__modifiers">
+                                </span>
+                        </h4>
+                        <aside class="phpdocumentor-element-found-in">
+                            <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Contact.php"><a
+                                    href="files/src-entity-contact.html"><abbr title="src/Entity/Contact.php">Contact.php</abbr></a></abbr>
+                            :
+                            <span class="phpdocumentor-element-found-in__line">114</span>
+                        </aside>
+
+                        <p class="phpdocumentor-summary">Updated at datetime.</p>
+
+                        <code class="phpdocumentor-code phpdocumentor-signature ">
+                            <span class="phpdocumentor-signature__visibility">private</span>
+                            <span class="phpdocumentor-signature__type"><abbr title="\DateTimeInterface">DateTimeInterface</abbr></span>
+                            <span class="phpdocumentor-signature__name">$updatedAt</span>
+                        </code>
+
+                        <section class="phpdocumentor-description"></section>
+
+
+                        <h5 class="phpdocumentor-tag-list__heading" id="tags">
+                            Tags
+                            <a class="headerlink" href="#tags"><i class="fas fa-link"></i></a>
+                        </h5>
+                        <dl class="phpdocumentor-tag-list">
+                            <dt class="phpdocumentor-tag-list__entry">
+                                <span class="phpdocumentor-tag__name">ORM\Column</span>
+                            </dt>
+                            <dd class="phpdocumentor-tag-list__definition">
+
+                                <section class="phpdocumentor-description"><p>(type=&quot;datetime&quot;)</p>
+                                </section>
+
+                            </dd>
+                            <dt class="phpdocumentor-tag-list__entry">
+                                <span class="phpdocumentor-tag__name">Gedmo\Timestampable</span>
+                            </dt>
+                            <dd class="phpdocumentor-tag-list__definition">
+
+                                <section class="phpdocumentor-description"><p>(on=&quot;update&quot;)</p>
+                                </section>
+
+                            </dd>
+                        </dl>
+
+                    </article>
+                    <article
+                            class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+                    >
+                        <h4 class="phpdocumentor-element__name" id="property_user">
+                            $user
+                            <a class="headerlink" href="classes/App-Entity-Contact.html#property_user"><i
+                                    class="fas fa-link"></i></a>
+                            <span class="phpdocumentor-element__modifiers">
+                                </span>
+                        </h4>
+                        <aside class="phpdocumentor-element-found-in">
+                            <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Contact.php"><a
+                                    href="files/src-entity-contact.html"><abbr title="src/Entity/Contact.php">Contact.php</abbr></a></abbr>
+                            :
+                            <span class="phpdocumentor-element-found-in__line">96</span>
+                        </aside>
+
+                        <p class="phpdocumentor-summary">Users.</p>
+
+                        <code class="phpdocumentor-code phpdocumentor-signature ">
+                            <span class="phpdocumentor-signature__visibility">private</span>
+                            <span class="phpdocumentor-signature__type"><a href="classes/App-Entity-User.html"><abbr
+                                    title="\App\Entity\User">User</abbr></a></span>
+                            <span class="phpdocumentor-signature__name">$user</span>
+                        </code>
+
+                        <section class="phpdocumentor-description"></section>
+
+
+                        <h5 class="phpdocumentor-tag-list__heading" id="tags">
+                            Tags
+                            <a class="headerlink" href="#tags"><i class="fas fa-link"></i></a>
+                        </h5>
+                        <dl class="phpdocumentor-tag-list">
+                            <dt class="phpdocumentor-tag-list__entry">
+                                <span class="phpdocumentor-tag__name">ORM\ManyToOne</span>
+                            </dt>
+                            <dd class="phpdocumentor-tag-list__definition">
+
+                                <section class="phpdocumentor-description"><p>(targetEntity=User::class, inversedBy=&quot;contacts&quot;)</p>
+                                </section>
+
+                            </dd>
+                            <dt class="phpdocumentor-tag-list__entry">
+                                <span class="phpdocumentor-tag__name">ORM\JoinColumn</span>
+                            </dt>
+                            <dd class="phpdocumentor-tag-list__definition">
+
+                                <section class="phpdocumentor-description"><p>(nullable=false)</p>
+                                </section>
+
+                            </dd>
+                        </dl>
+
+                    </article>
+                </section>
+
+                <section class="phpdocumentor-methods">
+                    <h3 class="phpdocumentor-elements__header" id="methods">
+                        Methods
+                        <a class="headerlink" href="classes/App-Entity-Contact.html#methods"><i class="fas fa-link"></i></a>
+                    </h3>
+                    <article
+                            class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+                    >
+                        <h4 class="phpdocumentor-element__name" id="method___construct">
+                            __construct()
+                            <a class="headerlink" href="classes/App-Entity-Contact.html#method___construct"><i
+                                    class="fas fa-link"></i></a>
+                        </h4>
+                        <aside class="phpdocumentor-element-found-in">
+                            <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Contact.php"><a
+                                    href="files/src-entity-contact.html"><abbr title="src/Entity/Contact.php">Contact.php</abbr></a></abbr>
+                            :
+                            <span class="phpdocumentor-element-found-in__line">126</span>
+                        </aside>
+
+                        <p class="phpdocumentor-summary">Contact constructor.</p>
+
+                        <code class="phpdocumentor-code phpdocumentor-signature ">
+                            <span class="phpdocumentor-signature__visibility">public</span>
+                            <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span>)</span><span> : </span><span
+                                class="phpdocumentor-signature__response_type">mixed</span></code>
+
+                        <section class="phpdocumentor-description"></section>
+
+
+                        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+                        <span class="phpdocumentor-signature__response_type">mixed</span>
+                        &mdash;
+                        <section class="phpdocumentor-description"></section>
+
+
+                    </article>
+                    <article
+                            class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+                    >
+                        <h4 class="phpdocumentor-element__name" id="method_addEvent">
+                            addEvent()
+                            <a class="headerlink" href="classes/App-Entity-Contact.html#method_addEvent"><i
+                                    class="fas fa-link"></i></a>
+                        </h4>
+                        <aside class="phpdocumentor-element-found-in">
+                            <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Contact.php"><a
+                                    href="files/src-entity-contact.html"><abbr title="src/Entity/Contact.php">Contact.php</abbr></a></abbr>
+                            :
+                            <span class="phpdocumentor-element-found-in__line">328</span>
+                        </aside>
+
+                        <p class="phpdocumentor-summary">Add event.</p>
+
+                        <code class="phpdocumentor-code phpdocumentor-signature ">
+                            <span class="phpdocumentor-signature__visibility">public</span>
+                            <span class="phpdocumentor-signature__name">addEvent</span><span>(</span><span
+                                class="phpdocumentor-signature__argument"><span
+                                class="phpdocumentor-signature__argument__return-type"><a
+                                href="classes/App-Entity-Event.html"><abbr title="\App\Entity\Event">Event</abbr></a>&nbsp;</span><span
+                                class="phpdocumentor-signature__argument__name">$event</span></span><span>)</span><span> : </span><span
+                                class="phpdocumentor-signature__response_type">$this</span></code>
+
+                        <section class="phpdocumentor-description"></section>
+
+                        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+                        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                                <span class="phpdocumentor-signature__argument__name">$event</span>
+                                : <span class="phpdocumentor-signature__argument__return-type"><a
+                                    href="classes/App-Entity-Event.html"><abbr
+                                    title="\App\Entity\Event">Event</abbr></a></span>
+                            </dt>
+                            <dd class="phpdocumentor-argument-list__definition">
+                                <section class="phpdocumentor-description"><p>Event entity</p>
+                                </section>
+
+                            </dd>
+                        </dl>
+
+
+                        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+                        <span class="phpdocumentor-signature__response_type">$this</span>
+                        &mdash;
+                        <section class="phpdocumentor-description"></section>
+
+
+                    </article>
+                    <article
+                            class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+                    >
+                        <h4 class="phpdocumentor-element__name" id="method_getAddress">
+                            getAddress()
+                            <a class="headerlink" href="classes/App-Entity-Contact.html#method_getAddress"><i
+                                    class="fas fa-link"></i></a>
+                        </h4>
+                        <aside class="phpdocumentor-element-found-in">
+                            <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Contact.php"><a
+                                    href="files/src-entity-contact.html"><abbr title="src/Entity/Contact.php">Contact.php</abbr></a></abbr>
+                            :
+                            <span class="phpdocumentor-element-found-in__line">196</span>
+                        </aside>
+
+                        <p class="phpdocumentor-summary">Getter for address.</p>
+
+                        <code class="phpdocumentor-code phpdocumentor-signature ">
+                            <span class="phpdocumentor-signature__visibility">public</span>
+                            <span class="phpdocumentor-signature__name">getAddress</span><span>(</span><span>)</span><span> : </span><span
+                                class="phpdocumentor-signature__response_type">string|null</span></code>
+
+                        <section class="phpdocumentor-description"></section>
+
+
+                        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+                        <span class="phpdocumentor-signature__response_type">string|null</span>
+                        &mdash;
+                        <section class="phpdocumentor-description"></section>
+
+
+                    </article>
+                    <article
+                            class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+                    >
+                        <h4 class="phpdocumentor-element__name" id="method_getCreatedAt">
+                            getCreatedAt()
+                            <a class="headerlink" href="classes/App-Entity-Contact.html#method_getCreatedAt"><i
+                                    class="fas fa-link"></i></a>
+                        </h4>
+                        <aside class="phpdocumentor-element-found-in">
+                            <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Contact.php"><a
+                                    href="files/src-entity-contact.html"><abbr title="src/Entity/Contact.php">Contact.php</abbr></a></abbr>
+                            :
+                            <span class="phpdocumentor-element-found-in__line">268</span>
+                        </aside>
+
+                        <p class="phpdocumentor-summary">Getter for created at.</p>
+
+                        <code class="phpdocumentor-code phpdocumentor-signature ">
+                            <span class="phpdocumentor-signature__visibility">public</span>
+                            <span class="phpdocumentor-signature__name">getCreatedAt</span><span>(</span><span>)</span><span> : </span><span
+                                class="phpdocumentor-signature__response_type"><abbr title="\DateTimeInterface">DateTimeInterface</abbr>|null</span></code>
+
+                        <section class="phpdocumentor-description"></section>
+
+
+                        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+                        <span class="phpdocumentor-signature__response_type"><abbr title="\DateTimeInterface">DateTimeInterface</abbr>|null</span>
+                        &mdash;
+                        <section class="phpdocumentor-description"></section>
+
+
+                    </article>
+                    <article
+                            class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+                    >
+                        <h4 class="phpdocumentor-element__name" id="method_getEvents">
+                            getEvents()
+                            <a class="headerlink" href="classes/App-Entity-Contact.html#method_getEvents"><i
+                                    class="fas fa-link"></i></a>
+                        </h4>
+                        <aside class="phpdocumentor-element-found-in">
+                            <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Contact.php"><a
+                                    href="files/src-entity-contact.html"><abbr title="src/Entity/Contact.php">Contact.php</abbr></a></abbr>
+                            :
+                            <span class="phpdocumentor-element-found-in__line">316</span>
+                        </aside>
+
+                        <p class="phpdocumentor-summary">Getter events.</p>
+
+                        <code class="phpdocumentor-code phpdocumentor-signature ">
+                            <span class="phpdocumentor-signature__visibility">public</span>
+                            <span class="phpdocumentor-signature__name">getEvents</span><span>(</span><span>)</span><span> : </span><span
+                                class="phpdocumentor-signature__response_type"><abbr
+                                title="\Doctrine\Common\Collections\Collection">Collection</abbr>|array&lt;string|int, <a
+                                href="classes/App-Entity-Event.html"><abbr title="\App\Entity\Event">Event</abbr></a>&gt;</span></code>
+
+                        <section class="phpdocumentor-description"></section>
+
+
+                        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+                        <span class="phpdocumentor-signature__response_type"><abbr
+                                title="\Doctrine\Common\Collections\Collection">Collection</abbr>|array&lt;string|int, <a
+                                href="classes/App-Entity-Event.html"><abbr title="\App\Entity\Event">Event</abbr></a>&gt;</span>
+                        &mdash;
+                        <section class="phpdocumentor-description"></section>
+
+
+                    </article>
+                    <article
+                            class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+                    >
+                        <h4 class="phpdocumentor-element__name" id="method_getFirstName">
+                            getFirstName()
+                            <a class="headerlink" href="classes/App-Entity-Contact.html#method_getFirstName"><i
+                                    class="fas fa-link"></i></a>
+                        </h4>
+                        <aside class="phpdocumentor-element-found-in">
+                            <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Contact.php"><a
+                                    href="files/src-entity-contact.html"><abbr title="src/Entity/Contact.php">Contact.php</abbr></a></abbr>
+                            :
+                            <span class="phpdocumentor-element-found-in__line">148</span>
+                        </aside>
+
+                        <p class="phpdocumentor-summary">Getter for first name.</p>
+
+                        <code class="phpdocumentor-code phpdocumentor-signature ">
+                            <span class="phpdocumentor-signature__visibility">public</span>
+                            <span class="phpdocumentor-signature__name">getFirstName</span><span>(</span><span>)</span><span> : </span><span
+                                class="phpdocumentor-signature__response_type">string|null</span></code>
+
+                        <section class="phpdocumentor-description"></section>
+
+
+                        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+                        <span class="phpdocumentor-signature__response_type">string|null</span>
+                        &mdash;
+                        <section class="phpdocumentor-description"></section>
+
+
+                    </article>
+                    <article
+                            class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+                    >
+                        <h4 class="phpdocumentor-element__name" id="method_getId">
+                            getId()
+                            <a class="headerlink" href="classes/App-Entity-Contact.html#method_getId"><i
+                                    class="fas fa-link"></i></a>
+                        </h4>
+                        <aside class="phpdocumentor-element-found-in">
+                            <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Contact.php"><a
+                                    href="files/src-entity-contact.html"><abbr title="src/Entity/Contact.php">Contact.php</abbr></a></abbr>
+                            :
+                            <span class="phpdocumentor-element-found-in__line">138</span>
+                        </aside>
+
+                        <p class="phpdocumentor-summary">Getter for id.</p>
+
+                        <code class="phpdocumentor-code phpdocumentor-signature ">
+                            <span class="phpdocumentor-signature__visibility">public</span>
+                            <span class="phpdocumentor-signature__name">getId</span><span>(</span><span>)</span><span> : </span><span
+                                class="phpdocumentor-signature__response_type">int|null</span></code>
+
+                        <section class="phpdocumentor-description"></section>
+
+
+                        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+                        <span class="phpdocumentor-signature__response_type">int|null</span>
+                        &mdash;
+                        <section class="phpdocumentor-description"></section>
+
+
+                    </article>
+                    <article
+                            class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+                    >
+                        <h4 class="phpdocumentor-element__name" id="method_getLastName">
+                            getLastName()
+                            <a class="headerlink" href="classes/App-Entity-Contact.html#method_getLastName"><i
+                                    class="fas fa-link"></i></a>
+                        </h4>
+                        <aside class="phpdocumentor-element-found-in">
+                            <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Contact.php"><a
+                                    href="files/src-entity-contact.html"><abbr title="src/Entity/Contact.php">Contact.php</abbr></a></abbr>
+                            :
+                            <span class="phpdocumentor-element-found-in__line">172</span>
+                        </aside>
+
+                        <p class="phpdocumentor-summary">Getter for last name.</p>
+
+                        <code class="phpdocumentor-code phpdocumentor-signature ">
+                            <span class="phpdocumentor-signature__visibility">public</span>
+                            <span class="phpdocumentor-signature__name">getLastName</span><span>(</span><span>)</span><span> : </span><span
+                                class="phpdocumentor-signature__response_type">string|null</span></code>
+
+                        <section class="phpdocumentor-description"></section>
+
+
+                        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+                        <span class="phpdocumentor-signature__response_type">string|null</span>
+                        &mdash;
+                        <section class="phpdocumentor-description"></section>
+
+
+                    </article>
+                    <article
+                            class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+                    >
+                        <h4 class="phpdocumentor-element__name" id="method_getPhone">
+                            getPhone()
+                            <a class="headerlink" href="classes/App-Entity-Contact.html#method_getPhone"><i
+                                    class="fas fa-link"></i></a>
+                        </h4>
+                        <aside class="phpdocumentor-element-found-in">
+                            <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Contact.php"><a
+                                    href="files/src-entity-contact.html"><abbr title="src/Entity/Contact.php">Contact.php</abbr></a></abbr>
+                            :
+                            <span class="phpdocumentor-element-found-in__line">220</span>
+                        </aside>
+
+                        <p class="phpdocumentor-summary">Getter for Phone.</p>
+
+                        <code class="phpdocumentor-code phpdocumentor-signature ">
+                            <span class="phpdocumentor-signature__visibility">public</span>
+                            <span class="phpdocumentor-signature__name">getPhone</span><span>(</span><span>)</span><span> : </span><span
+                                class="phpdocumentor-signature__response_type">string|null</span></code>
+
+                        <section class="phpdocumentor-description"></section>
+
+
+                        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+                        <span class="phpdocumentor-signature__response_type">string|null</span>
+                        &mdash;
+                        <section class="phpdocumentor-description"></section>
+
+
+                    </article>
+                    <article
+                            class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+                    >
+                        <h4 class="phpdocumentor-element__name" id="method_getUpdatedAt">
+                            getUpdatedAt()
+                            <a class="headerlink" href="classes/App-Entity-Contact.html#method_getUpdatedAt"><i
+                                    class="fas fa-link"></i></a>
+                        </h4>
+                        <aside class="phpdocumentor-element-found-in">
+                            <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Contact.php"><a
+                                    href="files/src-entity-contact.html"><abbr title="src/Entity/Contact.php">Contact.php</abbr></a></abbr>
+                            :
+                            <span class="phpdocumentor-element-found-in__line">292</span>
+                        </aside>
+
+                        <p class="phpdocumentor-summary">Getter for updated at.</p>
+
+                        <code class="phpdocumentor-code phpdocumentor-signature ">
+                            <span class="phpdocumentor-signature__visibility">public</span>
+                            <span class="phpdocumentor-signature__name">getUpdatedAt</span><span>(</span><span>)</span><span> : </span><span
+                                class="phpdocumentor-signature__response_type"><abbr title="\DateTimeInterface">DateTimeInterface</abbr>|null</span></code>
+
+                        <section class="phpdocumentor-description"></section>
+
+
+                        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+                        <span class="phpdocumentor-signature__response_type"><abbr title="\DateTimeInterface">DateTimeInterface</abbr>|null</span>
+                        &mdash;
+                        <section class="phpdocumentor-description"></section>
+
+
+                    </article>
+                    <article
+                            class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+                    >
+                        <h4 class="phpdocumentor-element__name" id="method_getUser">
+                            getUser()
+                            <a class="headerlink" href="classes/App-Entity-Contact.html#method_getUser"><i
+                                    class="fas fa-link"></i></a>
+                        </h4>
+                        <aside class="phpdocumentor-element-found-in">
+                            <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Contact.php"><a
+                                    href="files/src-entity-contact.html"><abbr title="src/Entity/Contact.php">Contact.php</abbr></a></abbr>
+                            :
+                            <span class="phpdocumentor-element-found-in__line">244</span>
+                        </aside>
+
+                        <p class="phpdocumentor-summary">Getter for user.</p>
+
+                        <code class="phpdocumentor-code phpdocumentor-signature ">
+                            <span class="phpdocumentor-signature__visibility">public</span>
+                            <span class="phpdocumentor-signature__name">getUser</span><span>(</span><span>)</span><span> : </span><span
+                                class="phpdocumentor-signature__response_type"><a
+                                href="classes/App-Entity-User.html"><abbr title="\App\Entity\User">User</abbr></a>|null</span></code>
+
+                        <section class="phpdocumentor-description"></section>
+
+
+                        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+                        <span class="phpdocumentor-signature__response_type"><a
+                                href="classes/App-Entity-User.html"><abbr title="\App\Entity\User">User</abbr></a>|null</span>
+                        &mdash;
+                        <section class="phpdocumentor-description"><p>User</p>
+                        </section>
+
+
+                    </article>
+                    <article
+                            class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+                    >
+                        <h4 class="phpdocumentor-element__name" id="method_removeEvent">
+                            removeEvent()
+                            <a class="headerlink" href="classes/App-Entity-Contact.html#method_removeEvent"><i
+                                    class="fas fa-link"></i></a>
+                        </h4>
+                        <aside class="phpdocumentor-element-found-in">
+                            <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Contact.php"><a
+                                    href="files/src-entity-contact.html"><abbr title="src/Entity/Contact.php">Contact.php</abbr></a></abbr>
+                            :
+                            <span class="phpdocumentor-element-found-in__line">345</span>
+                        </aside>
+
+                        <p class="phpdocumentor-summary">Remove event.</p>
+
+                        <code class="phpdocumentor-code phpdocumentor-signature ">
+                            <span class="phpdocumentor-signature__visibility">public</span>
+                            <span class="phpdocumentor-signature__name">removeEvent</span><span>(</span><span
+                                class="phpdocumentor-signature__argument"><span
+                                class="phpdocumentor-signature__argument__return-type"><a
+                                href="classes/App-Entity-Event.html"><abbr title="\App\Entity\Event">Event</abbr></a>&nbsp;</span><span
+                                class="phpdocumentor-signature__argument__name">$event</span></span><span>)</span><span> : </span><span
+                                class="phpdocumentor-signature__response_type">$this</span></code>
+
+                        <section class="phpdocumentor-description"></section>
+
+                        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+                        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                                <span class="phpdocumentor-signature__argument__name">$event</span>
+                                : <span class="phpdocumentor-signature__argument__return-type"><a
+                                    href="classes/App-Entity-Event.html"><abbr
+                                    title="\App\Entity\Event">Event</abbr></a></span>
+                            </dt>
+                            <dd class="phpdocumentor-argument-list__definition">
+                                <section class="phpdocumentor-description"><p>Event entity</p>
+                                </section>
+
+                            </dd>
+                        </dl>
+
+
+                        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+                        <span class="phpdocumentor-signature__response_type">$this</span>
+                        &mdash;
+                        <section class="phpdocumentor-description"></section>
+
+
+                    </article>
+                    <article
+                            class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+                    >
+                        <h4 class="phpdocumentor-element__name" id="method_setAddress">
+                            setAddress()
+                            <a class="headerlink" href="classes/App-Entity-Contact.html#method_setAddress"><i
+                                    class="fas fa-link"></i></a>
+                        </h4>
+                        <aside class="phpdocumentor-element-found-in">
+                            <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Contact.php"><a
+                                    href="files/src-entity-contact.html"><abbr title="src/Entity/Contact.php">Contact.php</abbr></a></abbr>
+                            :
+                            <span class="phpdocumentor-element-found-in__line">208</span>
+                        </aside>
+
+                        <p class="phpdocumentor-summary">Setter for Address.</p>
+
+                        <code class="phpdocumentor-code phpdocumentor-signature ">
+                            <span class="phpdocumentor-signature__visibility">public</span>
+                            <span class="phpdocumentor-signature__name">setAddress</span><span>(</span><span
+                                class="phpdocumentor-signature__argument"><span
+                                class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span
+                                class="phpdocumentor-signature__argument__name">$address</span></span><span>)</span><span> : </span><span
+                                class="phpdocumentor-signature__response_type">$this</span></code>
+
+                        <section class="phpdocumentor-description"></section>
+
+                        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+                        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                                <span class="phpdocumentor-signature__argument__name">$address</span>
+                                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+                            <dd class="phpdocumentor-argument-list__definition">
+                                <section class="phpdocumentor-description"><p>Address</p>
+                                </section>
+
+                            </dd>
+                        </dl>
+
+
+                        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+                        <span class="phpdocumentor-signature__response_type">$this</span>
+                        &mdash;
+                        <section class="phpdocumentor-description"></section>
+
+
+                    </article>
+                    <article
+                            class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+                    >
+                        <h4 class="phpdocumentor-element__name" id="method_setCreatedAt">
+                            setCreatedAt()
+                            <a class="headerlink" href="classes/App-Entity-Contact.html#method_setCreatedAt"><i
+                                    class="fas fa-link"></i></a>
+                        </h4>
+                        <aside class="phpdocumentor-element-found-in">
+                            <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Contact.php"><a
+                                    href="files/src-entity-contact.html"><abbr title="src/Entity/Contact.php">Contact.php</abbr></a></abbr>
+                            :
+                            <span class="phpdocumentor-element-found-in__line">280</span>
+                        </aside>
+
+                        <p class="phpdocumentor-summary">Setter for created at.</p>
+
+                        <code class="phpdocumentor-code phpdocumentor-signature ">
+                            <span class="phpdocumentor-signature__visibility">public</span>
+                            <span class="phpdocumentor-signature__name">setCreatedAt</span><span>(</span><span
+                                class="phpdocumentor-signature__argument"><span
+                                class="phpdocumentor-signature__argument__return-type"><abbr title="\DateTimeInterface">DateTimeInterface</abbr>&nbsp;</span><span
+                                class="phpdocumentor-signature__argument__name">$createdAt</span></span><span>)</span><span> : </span><span
+                                class="phpdocumentor-signature__response_type">$this</span></code>
+
+                        <section class="phpdocumentor-description"></section>
+
+                        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+                        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                                <span class="phpdocumentor-signature__argument__name">$createdAt</span>
+                                : <span class="phpdocumentor-signature__argument__return-type"><abbr
+                                    title="\DateTimeInterface">DateTimeInterface</abbr></span>
+                            </dt>
+                            <dd class="phpdocumentor-argument-list__definition">
+                                <section class="phpdocumentor-description"><p>Created at</p>
+                                </section>
+
+                            </dd>
+                        </dl>
+
+
+                        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+                        <span class="phpdocumentor-signature__response_type">$this</span>
+                        &mdash;
+                        <section class="phpdocumentor-description"></section>
+
+
+                    </article>
+                    <article
+                            class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+                    >
+                        <h4 class="phpdocumentor-element__name" id="method_setFirstName">
+                            setFirstName()
+                            <a class="headerlink" href="classes/App-Entity-Contact.html#method_setFirstName"><i
+                                    class="fas fa-link"></i></a>
+                        </h4>
+                        <aside class="phpdocumentor-element-found-in">
+                            <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Contact.php"><a
+                                    href="files/src-entity-contact.html"><abbr title="src/Entity/Contact.php">Contact.php</abbr></a></abbr>
+                            :
+                            <span class="phpdocumentor-element-found-in__line">160</span>
+                        </aside>
+
+                        <p class="phpdocumentor-summary">Setter for first name.</p>
+
+                        <code class="phpdocumentor-code phpdocumentor-signature ">
+                            <span class="phpdocumentor-signature__visibility">public</span>
+                            <span class="phpdocumentor-signature__name">setFirstName</span><span>(</span><span
+                                class="phpdocumentor-signature__argument"><span
+                                class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span
+                                class="phpdocumentor-signature__argument__name">$firstName</span></span><span>)</span><span> : </span><span
+                                class="phpdocumentor-signature__response_type">$this</span></code>
+
+                        <section class="phpdocumentor-description"></section>
+
+                        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+                        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                                <span class="phpdocumentor-signature__argument__name">$firstName</span>
+                                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+                            <dd class="phpdocumentor-argument-list__definition">
+                                <section class="phpdocumentor-description"><p>First name</p>
+                                </section>
+
+                            </dd>
+                        </dl>
+
+
+                        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+                        <span class="phpdocumentor-signature__response_type">$this</span>
+                        &mdash;
+                        <section class="phpdocumentor-description"></section>
+
+
+                    </article>
+                    <article
+                            class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+                    >
+                        <h4 class="phpdocumentor-element__name" id="method_setLastName">
+                            setLastName()
+                            <a class="headerlink" href="classes/App-Entity-Contact.html#method_setLastName"><i
+                                    class="fas fa-link"></i></a>
+                        </h4>
+                        <aside class="phpdocumentor-element-found-in">
+                            <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Contact.php"><a
+                                    href="files/src-entity-contact.html"><abbr title="src/Entity/Contact.php">Contact.php</abbr></a></abbr>
+                            :
+                            <span class="phpdocumentor-element-found-in__line">184</span>
+                        </aside>
+
+                        <p class="phpdocumentor-summary">Setter for last name.</p>
+
+                        <code class="phpdocumentor-code phpdocumentor-signature ">
+                            <span class="phpdocumentor-signature__visibility">public</span>
+                            <span class="phpdocumentor-signature__name">setLastName</span><span>(</span><span
+                                class="phpdocumentor-signature__argument"><span
+                                class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span
+                                class="phpdocumentor-signature__argument__name">$lastName</span></span><span>)</span><span> : </span><span
+                                class="phpdocumentor-signature__response_type">$this</span></code>
+
+                        <section class="phpdocumentor-description"></section>
+
+                        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+                        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                                <span class="phpdocumentor-signature__argument__name">$lastName</span>
+                                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+                            <dd class="phpdocumentor-argument-list__definition">
+                                <section class="phpdocumentor-description"><p>Last name</p>
+                                </section>
+
+                            </dd>
+                        </dl>
+
+
+                        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+                        <span class="phpdocumentor-signature__response_type">$this</span>
+                        &mdash;
+                        <section class="phpdocumentor-description"></section>
+
+
+                    </article>
+                    <article
+                            class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+                    >
+                        <h4 class="phpdocumentor-element__name" id="method_setPhone">
+                            setPhone()
+                            <a class="headerlink" href="classes/App-Entity-Contact.html#method_setPhone"><i
+                                    class="fas fa-link"></i></a>
+                        </h4>
+                        <aside class="phpdocumentor-element-found-in">
+                            <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Contact.php"><a
+                                    href="files/src-entity-contact.html"><abbr title="src/Entity/Contact.php">Contact.php</abbr></a></abbr>
+                            :
+                            <span class="phpdocumentor-element-found-in__line">232</span>
+                        </aside>
+
+                        <p class="phpdocumentor-summary">Setter for Phone.</p>
+
+                        <code class="phpdocumentor-code phpdocumentor-signature ">
+                            <span class="phpdocumentor-signature__visibility">public</span>
+                            <span class="phpdocumentor-signature__name">setPhone</span><span>(</span><span
+                                class="phpdocumentor-signature__argument"><span
+                                class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span
+                                class="phpdocumentor-signature__argument__name">$phone</span></span><span>)</span><span> : </span><span
+                                class="phpdocumentor-signature__response_type"><a
+                                href="classes/App-Entity-Contact.html"><abbr title="\App\Entity\Contact">Contact</abbr></a></span></code>
+
+                        <section class="phpdocumentor-description"></section>
+
+                        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+                        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                                <span class="phpdocumentor-signature__argument__name">$phone</span>
+                                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+                            <dd class="phpdocumentor-argument-list__definition">
+                                <section class="phpdocumentor-description"><p>Phone</p>
+                                </section>
+
+                            </dd>
+                        </dl>
+
+
+                        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+                        <span class="phpdocumentor-signature__response_type"><a
+                                href="classes/App-Entity-Contact.html"><abbr title="\App\Entity\Contact">Contact</abbr></a></span>
+                        &mdash;
+                        <section class="phpdocumentor-description"></section>
+
+
+                    </article>
+                    <article
+                            class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+                    >
+                        <h4 class="phpdocumentor-element__name" id="method_setUpdatedAt">
+                            setUpdatedAt()
+                            <a class="headerlink" href="classes/App-Entity-Contact.html#method_setUpdatedAt"><i
+                                    class="fas fa-link"></i></a>
+                        </h4>
+                        <aside class="phpdocumentor-element-found-in">
+                            <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Contact.php"><a
+                                    href="files/src-entity-contact.html"><abbr title="src/Entity/Contact.php">Contact.php</abbr></a></abbr>
+                            :
+                            <span class="phpdocumentor-element-found-in__line">304</span>
+                        </aside>
+
+                        <p class="phpdocumentor-summary">Setter for updated at.</p>
+
+                        <code class="phpdocumentor-code phpdocumentor-signature ">
+                            <span class="phpdocumentor-signature__visibility">public</span>
+                            <span class="phpdocumentor-signature__name">setUpdatedAt</span><span>(</span><span
+                                class="phpdocumentor-signature__argument"><span
+                                class="phpdocumentor-signature__argument__return-type"><abbr title="\DateTimeInterface">DateTimeInterface</abbr>&nbsp;</span><span
+                                class="phpdocumentor-signature__argument__name">$updatedAt</span></span><span>)</span><span> : </span><span
+                                class="phpdocumentor-signature__response_type">$this</span></code>
+
+                        <section class="phpdocumentor-description"></section>
+
+                        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+                        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                                <span class="phpdocumentor-signature__argument__name">$updatedAt</span>
+                                : <span class="phpdocumentor-signature__argument__return-type"><abbr
+                                    title="\DateTimeInterface">DateTimeInterface</abbr></span>
+                            </dt>
+                            <dd class="phpdocumentor-argument-list__definition">
+                                <section class="phpdocumentor-description"><p>Updated at</p>
+                                </section>
+
+                            </dd>
+                        </dl>
+
+
+                        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+                        <span class="phpdocumentor-signature__response_type">$this</span>
+                        &mdash;
+                        <section class="phpdocumentor-description"></section>
+
+
+                    </article>
+                    <article
+                            class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+                    >
+                        <h4 class="phpdocumentor-element__name" id="method_setUser">
+                            setUser()
+                            <a class="headerlink" href="classes/App-Entity-Contact.html#method_setUser"><i
+                                    class="fas fa-link"></i></a>
+                        </h4>
+                        <aside class="phpdocumentor-element-found-in">
+                            <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Contact.php"><a
+                                    href="files/src-entity-contact.html"><abbr title="src/Entity/Contact.php">Contact.php</abbr></a></abbr>
+                            :
+                            <span class="phpdocumentor-element-found-in__line">256</span>
+                        </aside>
+
+                        <p class="phpdocumentor-summary">Setter for user.</p>
+
+                        <code class="phpdocumentor-code phpdocumentor-signature ">
+                            <span class="phpdocumentor-signature__visibility">public</span>
+                            <span class="phpdocumentor-signature__name">setUser</span><span>(</span><span
+                                class="phpdocumentor-signature__argument"><span
+                                class="phpdocumentor-signature__argument__return-type"><a
+                                href="classes/App-Entity-User.html"><abbr title="\App\Entity\User">User</abbr></a>&nbsp;</span><span
+                                class="phpdocumentor-signature__argument__name">$user</span></span><span>)</span><span> : </span><span
+                                class="phpdocumentor-signature__response_type">$this</span></code>
+
+                        <section class="phpdocumentor-description"></section>
+
+                        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+                        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                                <span class="phpdocumentor-signature__argument__name">$user</span>
+                                : <span class="phpdocumentor-signature__argument__return-type"><a
+                                    href="classes/App-Entity-User.html"><abbr
+                                    title="\App\Entity\User">User</abbr></a></span>
+                            </dt>
+                            <dd class="phpdocumentor-argument-list__definition">
+                                <section class="phpdocumentor-description"><p>User</p>
+                                </section>
+
+                            </dd>
+                        </dl>
+
+
+                        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+                        <span class="phpdocumentor-signature__response_type">$this</span>
+                        &mdash;
+                        <section class="phpdocumentor-description"></section>
+
+
+                    </article>
+                </section>
+
+            </article>
+            <section class="phpdocumentor-search-results phpdocumentor-search-results--hidden" data-search-results>
+                <section class="phpdocumentor-search-results__dialog">
+                    <header class="phpdocumentor-search-results__header">
+                        <h2 class="phpdocumentor-search-results__title">Search results</h2>
+                        <button class="phpdocumentor-search-results__close"><i class="fas fa-times"></i></button>
+                    </header>
+                    <section class="phpdocumentor-search-results__body">
+                        <ul class="phpdocumentor-search-results__entries"></ul>
+                    </section>
+                </section>
+            </section>
+        </div>
+    </div>
+    <a class="phpdocumentor-back-to-top" href="classes/App-Entity-Contact.html#top"><i
+            class="fas fa-chevron-circle-up"></i></a>
+
+</main>
+
+<script>
+    cssVars({});
+</script>
+</body>
+</html>

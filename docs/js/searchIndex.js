@@ -1,36 +1,6 @@
 Search.appendIndex(
     [
                 {
-            "fqsen": "\\App\\Kernel",
-            "name": "Kernel",
-            "summary": "",
-            "url": "classes/App-Kernel.html"
-        },                {
-            "fqsen": "\\App\\Kernel\u003A\u003AregisterBundles\u0028\u0029",
-            "name": "registerBundles",
-            "summary": "",
-            "url": "classes/App-Kernel.html#method_registerBundles"
-        },                {
-            "fqsen": "\\App\\Kernel\u003A\u003AgetProjectDir\u0028\u0029",
-            "name": "getProjectDir",
-            "summary": "",
-            "url": "classes/App-Kernel.html#method_getProjectDir"
-        },                {
-            "fqsen": "\\App\\Kernel\u003A\u003AconfigureContainer\u0028\u0029",
-            "name": "configureContainer",
-            "summary": "",
-            "url": "classes/App-Kernel.html#method_configureContainer"
-        },                {
-            "fqsen": "\\App\\Kernel\u003A\u003AconfigureRoutes\u0028\u0029",
-            "name": "configureRoutes",
-            "summary": "",
-            "url": "classes/App-Kernel.html#method_configureRoutes"
-        },                {
-            "fqsen": "\\App\\Kernel\u003A\u003ACONFIG_EXTS",
-            "name": "CONFIG_EXTS",
-            "summary": "",
-            "url": "classes/App-Kernel.html#constant_CONFIG_EXTS"
-        },                {
             "fqsen": "\\App\\Controller\\CategoryController",
             "name": "CategoryController",
             "summary": "Class\u0020CategoryController.",
@@ -906,26 +876,56 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Form-LogInType.html#method_buildForm"
         },                {
-            "fqsen": "\\App\\Form\\LogInType\u003A\u003AconfigureOptions\u0028\u0029",
-            "name": "configureOptions",
-            "summary": "",
-            "url": "classes/App-Form-LogInType.html#method_configureOptions"
-        },                {
-            "fqsen": "\\App\\Form\\LogInType\u003A\u003AgetBlockPrefix\u0028\u0029",
-            "name": "getBlockPrefix",
-            "summary": "",
-            "url": "classes/App-Form-LogInType.html#method_getBlockPrefix"
-        },                {
-            "fqsen": "\\App\\Repository\\CategoryRepository",
-            "name": "CategoryRepository",
-            "summary": "",
-            "url": "classes/App-Repository-CategoryRepository.html"
-        },                {
-            "fqsen": "\\App\\Repository\\CategoryRepository\u003A\u003A__construct\u0028\u0029",
-            "name": "__construct",
-            "summary": "CategoryRepository\u0020constructor.",
-            "url": "classes/App-Repository-CategoryRepository.html#method___construct"
-        },                {
+        "fqsen": "\\App\\Form\\LogInType\u003A\u003AconfigureOptions\u0028\u0029",
+        "name": "configureOptions",
+        "summary": "",
+        "url": "classes/App-Form-LogInType.html#method_configureOptions"
+    }, {
+        "fqsen": "\\App\\Form\\LogInType\u003A\u003AgetBlockPrefix\u0028\u0029",
+        "name": "getBlockPrefix",
+        "summary": "",
+        "url": "classes/App-Form-LogInType.html#method_getBlockPrefix"
+    }, {
+        "fqsen": "\\App\\Kernel",
+        "name": "Kernel",
+        "summary": "",
+        "url": "classes/App-Kernel.html"
+    }, {
+        "fqsen": "\\App\\Kernel\u003A\u003AregisterBundles\u0028\u0029",
+        "name": "registerBundles",
+        "summary": "",
+        "url": "classes/App-Kernel.html#method_registerBundles"
+    }, {
+        "fqsen": "\\App\\Kernel\u003A\u003AgetProjectDir\u0028\u0029",
+        "name": "getProjectDir",
+        "summary": "",
+        "url": "classes/App-Kernel.html#method_getProjectDir"
+    }, {
+        "fqsen": "\\App\\Kernel\u003A\u003AconfigureContainer\u0028\u0029",
+        "name": "configureContainer",
+        "summary": "",
+        "url": "classes/App-Kernel.html#method_configureContainer"
+    }, {
+        "fqsen": "\\App\\Kernel\u003A\u003AconfigureRoutes\u0028\u0029",
+        "name": "configureRoutes",
+        "summary": "",
+        "url": "classes/App-Kernel.html#method_configureRoutes"
+    }, {
+        "fqsen": "\\App\\Kernel\u003A\u003ACONFIG_EXTS",
+        "name": "CONFIG_EXTS",
+        "summary": "",
+        "url": "classes/App-Kernel.html#constant_CONFIG_EXTS"
+    }, {
+        "fqsen": "\\App\\Repository\\CategoryRepository",
+        "name": "CategoryRepository",
+        "summary": "",
+        "url": "classes/App-Repository-CategoryRepository.html"
+    }, {
+        "fqsen": "\\App\\Repository\\CategoryRepository\u003A\u003A__construct\u0028\u0029",
+        "name": "__construct",
+        "summary": "CategoryRepository\u0020constructor.",
+        "url": "classes/App-Repository-CategoryRepository.html#method___construct"
+    }, {
             "fqsen": "\\App\\Repository\\CategoryRepository\u003A\u003Asave\u0028\u0029",
             "name": "save",
             "summary": "Save\u0020record.",
