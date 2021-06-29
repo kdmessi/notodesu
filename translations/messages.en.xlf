@@ -91,6 +91,10 @@
                 <source>global.action.add_new</source>
                 <target>Add new</target>
             </trans-unit>
+            <trans-unit id="global_action_login">
+                <source>global.action.login</source>
+                <target>Sign in</target>
+            </trans-unit>
             <trans-unit id="global_action_logout">
                 <source>global.action.logout</source>
                 <target>Logout</target>
@@ -123,6 +127,14 @@
                 <source>global.label.category</source>
                 <target>Category</target>
             </trans-unit>
+            <trans-unit id="global_label_categories">
+                <source>global.label.categories</source>
+                <target>Categories</target>
+            </trans-unit>
+            <trans-unit id="global_label_contacts">
+                <source>global.label.contacts</source>
+                <target>Contacts</target>
+            </trans-unit>
             <trans-unit id="global_label_created_at">
                 <source>global.label.created_at</source>
                 <target>Created at</target>
@@ -131,9 +143,17 @@
                 <source>global.label.date</source>
                 <target>Date</target>
             </trans-unit>
+            <trans-unit id="global_label_events">
+                <source>global.label.events</source>
+                <target>Events</target>
+            </trans-unit>
             <trans-unit id="global_label_first_name">
                 <source>global.label.first_name</source>
                 <target>First name</target>
+            </trans-unit>
+            <trans-unit id="global_label_homepage">
+                <source>global.label.homepage</source>
+                <target>Homepage</target>
             </trans-unit>
             <trans-unit id="global_label_id">
                 <source>global.label.id</source>

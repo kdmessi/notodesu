@@ -1,0 +1,55 @@
+{% set route_name = app.request.attributes.get('_route') %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        {% if is_granted('ROLE_USER') %}
+            <div class="collapse navbar-collapse w-100 order-1 order-md-0 dual-collapse2" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link{% if route_name == 'homepage' %} active{% endif %}"{% if route_name == 'homepage' %} aria-current="page"{% endif %}
+                           href="{{ url('homepage') }}">{{ 'global.label.homepage' | trans }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link{% if route_name == 'category_index' %} active{% endif %}"{% if route_name == 'category_index' %} aria-current="page"{% endif %}
+                           href="{{ url('category_index') }}">{{ 'global.label.categories' | trans }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link{% if route_name == 'contact_index' %} active{% endif %}"{% if route_name == 'contact_index' %} aria-current="page"{% endif %}
+                           href="{{ url('contact_index') }}">{{ 'global.label.contacts' | trans }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link{% if route_name == 'event_index' %} active{% endif %}"{% if route_name == 'event_index' %} aria-current="page"{% endif %}
+                           href="{{ url('event_index') }}">{{ 'global.label.events' | trans }}</a>
+                    </li>
+                </ul>
+            </div>
+        {% endif %}
+        <div class="mx-auto order-0">
+            <a class="navbar-brand" href="{{ url('homepage') }}">NOTODESU</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-select-language" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        {{ app.request.locale | locale_name(app.request.locale) | u.title }}
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdown-menu-select-language">
+                        <li><a class="dropdown-item{% if app.request.locale == "pl" %} active{% endif %}" href="{{ path('homepage', { _locale: 'pl' }) }}">{{ 'pl' | locale_name(app.request.locale) | u.title }}</a></li>
+                        <li><a class="dropdown-item{% if app.request.locale == "en" %} active{% endif %}" href="{{ path('homepage', { _locale: 'en' }) }}">{{ 'en' | locale_name(app.request.locale) | u.title }}</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    {% if is_granted('ROLE_USER') %}
+                        <a class="nav-link" href="{{ url('app_logout') }}">{{ 'global.action.logout' | trans }}</a>
+                    {% else %}
+                        <a class="nav-link" href="{{ url('app_login') }}">{{ 'global.action.login' | trans }}</a>
+                    {% endif %}
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
